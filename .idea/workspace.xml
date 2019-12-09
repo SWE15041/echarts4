@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3576a084-6732-462f-9c0f-b59ea172845b" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="568227487">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="211" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="211" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="9427" />
+          <entry key="xml" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="9427" />
+          <entry key="XML" value="8" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/LineSeries.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1059">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="docComment;field#coordinateSystem#0;class#LineSeries#0" />
+                <element signature="docComment;field#xAxisIndex#0;class#LineSeries#0" />
+                <element signature="docComment;field#yAxisIndex#0;class#LineSeries#0" />
+                <element signature="docComment;field#polarIndex#0;class#LineSeries#0" />
+                <element signature="docComment;field#symbol#0;class#LineSeries#0" />
+                <element signature="docComment;field#symbolSize#0;class#LineSeries#0" />
+                <element signature="docComment;field#symbolRotate#0;class#LineSeries#0" />
+                <element signature="docComment;field#symbolKeepAspect#0;class#LineSeries#0" />
+                <element signature="docComment;field#symbolOffset#0;class#LineSeries#0" />
+                <element signature="docComment;field#showSymbol#0;class#LineSeries#0" />
+                <element signature="docComment;field#showAllSymbol#0;class#LineSeries#0" />
+                <element signature="docComment;field#hoverAnimation#0;class#LineSeries#0" />
+                <element signature="docComment;field#stack#0;class#LineSeries#0" />
+                <element signature="docComment;field#cursor#0;class#LineSeries#0" />
+                <element signature="docComment;field#connectNulls#0;class#LineSeries#0" />
+                <element signature="docComment;field#clip#0;class#LineSeries#0" />
+                <element signature="docComment;field#step#0;class#LineSeries#0" />
+                <element signature="docComment;field#lineStyle#0;class#LineSeries#0" />
+                <element signature="docComment;field#areaStyle#0;class#LineSeries#0" />
+                <element signature="docComment;field#smooth#0;class#LineSeries#0" />
+                <element signature="docComment;field#smoothMonotone#0;class#LineSeries#0" />
+                <element signature="docComment;field#sampling#0;class#LineSeries#0" />
+                <element signature="docComment;field#dimensions#0;class#LineSeries#0" />
+                <element signature="docComment;field#encode#0;class#LineSeries#0" />
+                <element signature="docComment;field#data#0;class#LineSeries#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/BaseSeries.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-80">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <element signature="docComment;field#type#0;class#BaseSeries#0" />
+                <element signature="docComment;field#id#0;class#BaseSeries#0" />
+                <element signature="docComment;field#name#0;class#BaseSeries#0" />
+                <element signature="docComment;field#legendHoverLink#0;class#BaseSeries#0" />
+                <element signature="docComment;field#label#0;class#BaseSeries#0" />
+                <element signature="docComment;field#itemStyle#0;class#BaseSeries#0" />
+                <element signature="docComment;field#cursor#0;class#BaseSeries#0" />
+                <element signature="docComment;field#zlevel#0;class#BaseSeries#0" />
+                <element signature="docComment;field#z#0;class#BaseSeries#0" />
+                <element signature="docComment;field#silent#0;class#BaseSeries#0" />
+                <element signature="docComment;field#dimensions#0;class#BaseSeries#0" />
+                <element signature="docComment;field#seriesLayoutBy#0;class#BaseSeries#0" />
+                <element signature="docComment;field#datasetIndex#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animation#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animationThreshold#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animationDuration#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animationEasing#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animationDelay#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animationDurationUpdate#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animationEasingUpdate#0;class#BaseSeries#0" />
+                <element signature="docComment;field#animationDelayUpdate#0;class#BaseSeries#0" />
+                <element signature="docComment;field#tooltip#0;class#BaseSeries#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/util/PieCharUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/dto/LineFormatDataDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/constant/Symbol.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/LineSeriesData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="docComment;field#symbol#0;class#LineSeriesData#0" />
+                <element signature="docComment;field#symbolSize#0;class#LineSeriesData#0" />
+                <element signature="docComment;field#symbolRotate#0;class#LineSeriesData#0" />
+                <element signature="docComment;field#symbolKeepAspect#0;class#LineSeriesData#0" />
+                <element signature="docComment;field#symbolOffset#0;class#LineSeriesData#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/SeriesData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+              <folding>
+                <element signature="docComment;class#SeriesData#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/util/LineChartUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getLineOption#0;class#LineChartUtil#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/util/BarChartUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>textStyle</find>
+      <find>extraCssText</find>
+      <find>renderMode</find>
+      <find>backgroundColor</find>
+      <find>showContent</find>
+      <find>shadowOffsetX</find>
+      <find>snap</find>
+      <find>offset</find>
+      <find>坐标轴名称。</find>
+      <find>nameLocation</find>
+      <find>axisLine</find>
+      <find>onZeroAxisIndex</find>
+      <find>alignWithLabel</find>
+      <find>0</find>
+      <find>backgroun</find>
+      <find>showTitle</find>
+      <find>,</find>
+      <find>borderColor</find>
+      <find>type</find>
+      <find>IconStyle</find>
+      <find>textVerticalAlign</find>
+      <find>triggerEvent</find>
+      <find>xAxis</find>
+      <find>xAxisTitle</find>
+      <find>symbolKeepAspect</find>
+      <find>position</find>
+      <find>formatter</find>
+      <find>：</find>
+      <find>'</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>=</replace>
+      <replace>0.0</replace>
+      <replace>;</replace>
+      <replace />
+      <replace>,</replace>
+      <replace>,</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/common/Component.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/Orient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/iconStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/Align.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/VerticalAlign.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/base/ColorStops.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/base/Color.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/common/Tooltip.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/common/Toolbox.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/ShadowStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/AreaStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/ItemStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/BaseStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/NameTextStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/IconStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/common/Title.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/common/Basic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/ChartType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/Symbol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/LabelPosition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/TextStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/LabelStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/axis/AxisLabel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/SeriesData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/PieSeriesData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/BarSeriesData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/LineSeriesData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/common/LabelLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/series/BaseSeries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/series/MarkArea.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/MarkAreaData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/markAreaData/LineMarkAreaData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/markAreaData/MarkAreaData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/markAreaData/PieMarkAreaData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/style/LineStyle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/series/LineSeries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/series/BarSeries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/series/PieSeries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/FilterMode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/zoomOnMouseWheel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/ZoomOnMouseWheel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/data/KeyBoardValue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/constant/DataZoomType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/option/LineOption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/common/DataZoom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/axis/Axis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/util/dto/LineDataDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/util/dto/LineFormatDataDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/dto/LineFormatDataDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyn/util/LineChartUtil.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="840" />
+    <option name="y" value="23" />
+    <option name="width" value="840" />
+    <option name="height" value="942" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="echarts4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="echarts4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echarts4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="echarts4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echarts4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="echarts4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echarts4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="echarts4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echarts4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="echarts4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lyn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echarts4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="echarts4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lyn" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575888818533" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.lyn" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lyn.data.markAreaData" />
+      <recent name="com.lyn.data" />
+      <recent name="com.lyn.series" />
+      <recent name="com.lyn.common" />
+      <recent name="com.lyn.style" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/lyn/axis" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/lyn/common" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/lyn/style" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/lyn/series" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.LineChartUtil">
+    <configuration name="AreaStyle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lyn.style.AreaStyle" />
+      <module name="echarts4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lyn.style.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LineChartUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lyn.util.LineChartUtil" />
+      <module name="echarts4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lyn.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LineMarkAreaData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lyn.data.markAreaData.LineMarkAreaData" />
+      <module name="echarts4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lyn.data.markAreaData.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AreaStyle" />
+      <item itemvalue="Application.LineMarkAreaData" />
+      <item itemvalue="Application.LineChartUtil" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LineChartUtil" />
+        <item itemvalue="Application.LineMarkAreaData" />
+        <item itemvalue="Application.AreaStyle" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3576a084-6732-462f-9c0f-b59ea172845b" name="Default Changelist" comment="" />
+      <created>1575440268162</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575440268162</updated>
+      <workItem from="1575440269759" duration="11754000" />
+      <workItem from="1575510165671" duration="11550000" />
+      <workItem from="1575528389504" duration="12665000" />
+      <workItem from="1575855453708" duration="23519000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="59488000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-3" y="23" width="1680" height="942" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19963145" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972324" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972324" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39951864" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32972324" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32972324" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32994923" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19963145" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972324" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972324" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39951864" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32972324" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32972324" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32994923" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/XYChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="1434" column="30" selection-start-line="1434" selection-start-column="30" selection-end-line="1434" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/MarkLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/style/ItemStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#45#91#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/constant/ChartType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/MarkPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="102" column="40" lean-forward="true" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
+          <folding>
+            <element signature="docComment;field#symbol#0;class#MarkPoint#0" />
+            <element signature="docComment;field#symbolSize#0;class#MarkPoint#0" />
+            <element signature="docComment;field#symbolKeepAspect#0;class#MarkPoint#0" />
+            <element signature="docComment;field#symbolOffset#0;class#MarkPoint#0" />
+            <element signature="docComment;field#silent#0;class#MarkPoint#0" />
+            <element signature="class#Data#0;class#MarkPoint#0" />
+            <element signature="docComment;field#type#0;class#Data#0;class#MarkPoint#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/constant/LabelPosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/axis/AxisLabel.java_">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/axis/AxisLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/style/LabelStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="docComment;field#show#0;class#LabelStyle#0" />
+            <element signature="docComment;field#position#0;class#LabelStyle#0" />
+            <element signature="docComment;field#distance#0;class#LabelStyle#0" />
+            <element signature="docComment;field#rotate#0;class#LabelStyle#0" />
+            <element signature="docComment;field#offset#0;class#LabelStyle#0" />
+            <element signature="docComment;field#formatter#0;class#LabelStyle#0" />
+            <element signature="docComment;field#inside#0;class#LabelStyle#0" />
+            <element signature="docComment;field#interval#0;class#LabelStyle#0" />
+            <element signature="docComment;field#margin#0;class#LabelStyle#0" />
+            <element signature="docComment;field#showMinLabel#0;class#LabelStyle#0" />
+            <element signature="docComment;field#showMaxLabel#0;class#LabelStyle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/style/TextStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#TextStyle#0" />
+            <element signature="docComment;field#fontStyle#0;class#TextStyle#0" />
+            <element signature="docComment;field#fontWeight#0;class#TextStyle#0" />
+            <element signature="docComment;field#fontFamily#0;class#TextStyle#0" />
+            <element signature="docComment;field#fontSize#0;class#TextStyle#0" />
+            <element signature="docComment;field#lineHeigh#0;class#TextStyle#0" />
+            <element signature="docComment;field#width#0;class#TextStyle#0" />
+            <element signature="docComment;field#height#0;class#TextStyle#0" />
+            <element signature="docComment;field#textBorderColor#0;class#TextStyle#0" />
+            <element signature="docComment;field#textBorderWidth#0;class#TextStyle#0" />
+            <element signature="docComment;field#textShadowColor#0;class#TextStyle#0" />
+            <element signature="docComment;field#textShadowBlur#0;class#TextStyle#0" />
+            <element signature="docComment;field#textShadowOffsetX#0;class#TextStyle#0" />
+            <element signature="docComment;field#textShadowOffsetY#0;class#TextStyle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/style/BaseStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;field#color#0;class#BaseStyle#0" />
+            <element signature="docComment;field#shadowBlur#0;class#BaseStyle#0" />
+            <element signature="docComment;field#shadowColor#0;class#BaseStyle#0" />
+            <element signature="docComment;field#shadowOffsetX#0;class#BaseStyle#0" />
+            <element signature="docComment;field#shadowOffsetY#0;class#BaseStyle#0" />
+            <element signature="docComment;field#opacity#0;class#BaseStyle#0" />
+            <element signature="docComment;field#borderColor#0;class#BaseStyle#0" />
+            <element signature="docComment;field#borderWidth#0;class#BaseStyle#0" />
+            <element signature="docComment;field#borderType#0;class#BaseStyle#0" />
+            <element signature="docComment;field#borderRadius#0;class#BaseStyle#0" />
+            <element signature="docComment;field#backgroundColor#0;class#BaseStyle#0" />
+            <element signature="docComment;field#align#0;class#BaseStyle#0" />
+            <element signature="docComment;field#verticalAlign#0;class#BaseStyle#0" />
+            <element signature="docComment;field#padding#0;class#BaseStyle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/PieSeriesData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/style/IconStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/common/Tooltip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;field#showContent#0;class#Tooltip#0" />
+            <element signature="docComment;field#trigger#0;class#Tooltip#0" />
+            <element signature="docComment;field#triggerOn#0;class#Tooltip#0" />
+            <element signature="docComment;field#islandFormatter#0;class#Tooltip#0" />
+            <element signature="docComment;field#showDelay#0;class#Tooltip#0" />
+            <element signature="docComment;field#hideDelay#0;class#Tooltip#0" />
+            <element signature="docComment;field#enterable#0;class#Tooltip#0" />
+            <element signature="docComment;field#renderMode#0;class#Tooltip#0" />
+            <element signature="docComment;field#confine#0;class#Tooltip#0" />
+            <element signature="docComment;field#transitionDuration#0;class#Tooltip#0" />
+            <element signature="docComment;field#position#0;class#Tooltip#0" />
+            <element signature="docComment;field#formatter#0;class#Tooltip#0" />
+            <element signature="docComment;field#backgroundColor#0;class#Tooltip#0" />
+            <element signature="docComment;field#borderColor#0;class#Tooltip#0" />
+            <element signature="docComment;field#borderWidth#0;class#Tooltip#0" />
+            <element signature="docComment;field#padding#0;class#Tooltip#0" />
+            <element signature="docComment;field#textStyle#0;class#Tooltip#0" />
+            <element signature="docComment;field#extraCssText#0;class#Tooltip#0" />
+            <element signature="docComment;field#alwaysShowContent#0;class#Tooltip#0" />
+            <element signature="docComment;field#axisPointer#0;class#Tooltip#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/base/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/common/AxisPointer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AxisPointer#0" />
+            <element signature="docComment;field#id#0;class#AxisPointer#0" />
+            <element signature="docComment;field#show#0;class#AxisPointer#0" />
+            <element signature="docComment;field#type#0;class#AxisPointer#0" />
+            <element signature="docComment;field#snap#0;class#AxisPointer#0" />
+            <element signature="docComment;field#z#0;class#AxisPointer#0" />
+            <element signature="docComment;field#label#0;class#AxisPointer#0" />
+            <element signature="docComment;field#lineStyle#0;class#AxisPointer#0" />
+            <element signature="docComment;field#shadowStyle#0;class#AxisPointer#0" />
+            <element signature="docComment;field#triggerTooltip#0;class#AxisPointer#0" />
+            <element signature="docComment;field#value#0;class#AxisPointer#0" />
+            <element signature="docComment;field#status#0;class#AxisPointer#0" />
+            <element signature="docComment;field#handle#0;class#AxisPointer#0" />
+            <element signature="docComment;field#link#0;class#AxisPointer#0" />
+            <element signature="docComment;field#triggerOn#0;class#AxisPointer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/option/BarOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/option/PieOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/common/LabelLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#LabelLine#0" />
+            <element signature="docComment;field#show#0;class#LabelLine#0" />
+            <element signature="docComment;field#length#0;class#LabelLine#0" />
+            <element signature="docComment;field#length2#0;class#LabelLine#0" />
+            <element signature="docComment;field#smooth#0;class#LabelLine#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/BarSeriesData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/BaseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/axis/AxisLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/axis/SplitLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding>
+            <element signature="docComment;class#SplitLine#0" />
+            <element signature="docComment;field#show#0;class#SplitLine#0" />
+            <element signature="docComment;field#interval#0;class#SplitLine#0" />
+            <element signature="docComment;field#lineStyle#0;class#SplitLine#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/MarkArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;field#animation#0;class#MarkArea#0" />
+            <element signature="docComment;field#animationThreshold#0;class#MarkArea#0" />
+            <element signature="docComment;field#animationDuration#0;class#MarkArea#0" />
+            <element signature="docComment;field#animationEasing#0;class#MarkArea#0" />
+            <element signature="docComment;field#animationDelay#0;class#MarkArea#0" />
+            <element signature="docComment;field#animationDurationUpdate#0;class#MarkArea#0" />
+            <element signature="docComment;field#animationEasingUpdate#0;class#MarkArea#0" />
+            <element signature="docComment;field#animationDelayUpdate#0;class#MarkArea#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.0/lombok-1.18.0-sources.jar!/lombok/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/markAreaData/BarMarkAreaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="docComment;field#type#0;class#BarMarkAreaData#0" />
+            <element signature="docComment;field#valueIndex#0;class#BarMarkAreaData#0" />
+            <element signature="docComment;field#valueDim#0;class#BarMarkAreaData#0" />
+            <element signature="docComment;field#coord#0;class#BarMarkAreaData#0" />
+            <element signature="docComment;field#name#0;class#BarMarkAreaData#0" />
+            <element signature="docComment;field#x#0;class#BarMarkAreaData#0" />
+            <element signature="docComment;field#y#0;class#BarMarkAreaData#0" />
+            <element signature="docComment;field#value#0;class#BarMarkAreaData#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/markAreaData/MarkAreaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/markAreaData/PieMarkAreaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="docComment;field#name#0;class#PieMarkAreaData#0" />
+            <element signature="docComment;field#x#0;class#PieMarkAreaData#0" />
+            <element signature="docComment;field#y#0;class#PieMarkAreaData#0" />
+            <element signature="docComment;field#value#0;class#PieMarkAreaData#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/markAreaData/LineMarkAreaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;field#valueIndex#0;class#LineMarkAreaData#0" />
+            <element signature="docComment;field#valueDim#0;class#LineMarkAreaData#0" />
+            <element signature="docComment;field#coord#0;class#LineMarkAreaData#0" />
+            <element signature="docComment;field#name#0;class#LineMarkAreaData#0" />
+            <element signature="docComment;field#x#0;class#LineMarkAreaData#0" />
+            <element signature="docComment;field#y#0;class#LineMarkAreaData#0" />
+            <element signature="docComment;field#value#0;class#LineMarkAreaData#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/style/LineStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="docComment;class#LineStyle#0" />
+            <element signature="docComment;field#width#0;class#LineStyle#0" />
+            <element signature="docComment;field#type#0;class#LineStyle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/BarSeries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;field#coordinateSystem#0;class#BarSeries#0" />
+            <element signature="docComment;field#xAxisIndex#0;class#BarSeries#0" />
+            <element signature="docComment;field#yAxisIndex#0;class#BarSeries#0" />
+            <element signature="docComment;field#roundCap#0;class#BarSeries#0" />
+            <element signature="docComment;field#stack#0;class#BarSeries#0" />
+            <element signature="docComment;field#barWidth#0;class#BarSeries#0" />
+            <element signature="docComment;field#barMaxWidth#0;class#BarSeries#0" />
+            <element signature="docComment;field#barMinWidth#0;class#BarSeries#0" />
+            <element signature="docComment;field#barMinHeight#0;class#BarSeries#0" />
+            <element signature="docComment;field#barGap#0;class#BarSeries#0" />
+            <element signature="docComment;field#barCategoryGap#0;class#BarSeries#0" />
+            <element signature="docComment;field#large#0;class#BarSeries#0" />
+            <element signature="docComment;field#largeThreshold#0;class#BarSeries#0" />
+            <element signature="docComment;field#progressive#0;class#BarSeries#0" />
+            <element signature="docComment;field#progressiveThreshold#0;class#BarSeries#0" />
+            <element signature="docComment;field#progressiveChunkMode#0;class#BarSeries#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/PieSeries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+          <folding>
+            <element signature="docComment;field#hoverAnimation#0;class#PieSeries#0" />
+            <element signature="docComment;field#hoverOffset#0;class#PieSeries#0" />
+            <element signature="docComment;field#selectedMode#0;class#PieSeries#0" />
+            <element signature="docComment;field#selectedOffset#0;class#PieSeries#0" />
+            <element signature="docComment;field#clockwise#0;class#PieSeries#0" />
+            <element signature="docComment;field#startAngle#0;class#PieSeries#0" />
+            <element signature="docComment;field#minAngle#0;class#PieSeries#0" />
+            <element signature="docComment;field#minShowLabelAngle#0;class#PieSeries#0" />
+            <element signature="docComment;field#roseType#0;class#PieSeries#0" />
+            <element signature="docComment;field#avoidLabelOverlap#0;class#PieSeries#0" />
+            <element signature="docComment;field#stillShowZeroSum#0;class#PieSeries#0" />
+            <element signature="docComment;field#labelLine#0;class#PieSeries#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/constant/FilterMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/security/Key.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <folding>
+            <element signature="docComment;class#Key#0" />
+            <element signature="docComment;field#serialVersionUID#0;class#Key#0" />
+            <element signature="docComment;method#getAlgorithm#0;class#Key#0" />
+            <element signature="docComment;method#getFormat#0;class#Key#0" />
+            <element signature="docComment;method#getEncoded#0;class#Key#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/awt/RenderingHints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+          <folding>
+            <element signature="docComment;class#RenderingHints#0" />
+            <element signature="e#3051#3452#0" />
+            <element signature="e#3051#8219#0" />
+            <element signature="e#3580#4449#0" />
+            <element signature="e#3623#3684#0" />
+            <element signature="e#4459#6329#0" />
+            <element signature="e#4984#5038#0" />
+            <element signature="e#6129#6187#0" />
+            <element signature="e#6372#6901#0" />
+            <element signature="e#6372#7027#0" />
+            <element signature="e#7037#7325#0" />
+            <element signature="e#7398#7613#0" />
+            <element signature="e#7703#7896#0" />
+            <element signature="e#7991#8125#0" />
+            <element signature="e#8281#8988#0" />
+            <element signature="e#9076#9188#0" />
+            <element signature="e#9283#9398#0" />
+            <element signature="e#9495#9658#0" />
+            <element signature="e#9764#10395#0" />
+            <element signature="e#10478#10622#0" />
+            <element signature="e#10718#10864#0" />
+            <element signature="e#10964#11149#0" />
+            <element signature="e#11249#12211#0" />
+            <element signature="e#12294#12402#0" />
+            <element signature="e#12502#12614#0" />
+            <element signature="e#12712#12846#0" />
+            <element signature="e#12946#14195#0" />
+            <element signature="e#14294#14441#0" />
+            <element signature="e#14547#14696#0" />
+            <element signature="e#14804#15017#0" />
+            <element signature="e#15133#16271#0" />
+            <element signature="e#16381#18839#0" />
+            <element signature="e#18957#19624#0" />
+            <element signature="e#19742#20462#0" />
+            <element signature="e#20580#21300#0" />
+            <element signature="e#21419#22791#0" />
+            <element signature="e#22899#27490#0" />
+            <element signature="e#27589#27768#0" />
+            <element signature="e#27882#28037#0" />
+            <element signature="e#28149#28323#0" />
+            <element signature="e#28445#29872#0" />
+            <element signature="e#29963#30539#0" />
+            <element signature="e#30671#31896#0" />
+            <element signature="e#32012#33012#0" />
+            <element signature="e#33126#34089#0" />
+            <element signature="e#34192#34366#0" />
+            <element signature="e#34488#34673#0" />
+            <element signature="e#34799#35009#0" />
+            <element signature="e#35135#37560#0" />
+            <element signature="e#37655#37816#0" />
+            <element signature="e#37924#38100#0" />
+            <element signature="e#38212#38459#0" />
+            <element signature="e#38571#39678#0" />
+            <element signature="e#39770#40215#0" />
+            <element signature="e#40314#40659#0" />
+            <element signature="e#40762#40960#0" />
+            <element signature="e#41053#41306#0" />
+            <element signature="e#41053#41429#0" />
+            <element signature="e#41435#41660#0" />
+            <element signature="e#41756#41958#0" />
+            <element signature="e#42025#42259#0" />
+            <element signature="e#42336#42784#0" />
+            <element signature="e#42888#43664#0" />
+            <element signature="e#43770#44206#0" />
+            <element signature="e#44293#45328#0" />
+            <element signature="e#44293#45670#0" />
+            <element signature="e#45676#46119#0" />
+            <element signature="e#46214#46310#0" />
+            <element signature="e#46373#46947#0" />
+            <element signature="e#47040#47744#0" />
+            <element signature="e#47040#48295#0" />
+            <element signature="e#47790#47806#0" />
+            <element signature="e#48301#49263#0" />
+            <element signature="e#49342#50402#0" />
+            <element signature="e#50488#51284#0" />
+            <element signature="e#51414#52425#0" />
+            <element signature="e#51414#52686#0" />
+            <element signature="e#52692#53459#0" />
+            <element signature="e#53534#53737#0" />
+            <element signature="e#53534#54196#0" />
+            <element signature="e#54202#54440#0" />
+            <element signature="e#54202#54682#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/KeyBoardValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/common/DataZoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;field#id#0;class#DataZoom#0" />
+            <element signature="docComment;field#disabled#0;class#DataZoom#0" />
+            <element signature="docComment;field#xAxisIndex#0;class#DataZoom#0" />
+            <element signature="docComment;field#yAxisIndex#0;class#DataZoom#0" />
+            <element signature="docComment;field#radiusAxisIndex#0;class#DataZoom#0" />
+            <element signature="docComment;field#angleAxisIndex#0;class#DataZoom#0" />
+            <element signature="docComment;field#filterMode#0;class#DataZoom#0" />
+            <element signature="docComment;field#start#0;class#DataZoom#0" />
+            <element signature="docComment;field#wn#0;class#DataZoom#0" />
+            <element signature="docComment;field#startValue#0;class#DataZoom#0" />
+            <element signature="docComment;field#endValue#0;class#DataZoom#0" />
+            <element signature="docComment;field#minSpan#0;class#DataZoom#0" />
+            <element signature="docComment;field#maxSpan#0;class#DataZoom#0" />
+            <element signature="docComment;field#minValueSpan#0;class#DataZoom#0" />
+            <element signature="docComment;field#maxValueSpan#0;class#DataZoom#0" />
+            <element signature="docComment;field#orient#0;class#DataZoom#0" />
+            <element signature="docComment;field#zoomLock#0;class#DataZoom#0" />
+            <element signature="docComment;field#throttle#0;class#DataZoom#0" />
+            <element signature="docComment;field#rangeMode#0;class#DataZoom#0" />
+            <element signature="docComment;field#zoomOnMouseWheel#0;class#DataZoom#0" />
+            <element signature="docComment;field#moveOnMouseMove#0;class#DataZoom#0" />
+            <element signature="docComment;field#moveOnMouseWheel#0;class#DataZoom#0" />
+            <element signature="docComment;field#preventDefaultMouseMove#0;class#DataZoom#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/constant/DataZoomType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/common/Title.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;class#Title#0" />
+            <element signature="docComment;field#id#0;class#Title#0" />
+            <element signature="docComment;field#show#0;class#Title#0" />
+            <element signature="docComment;field#text#0;class#Title#0" />
+            <element signature="docComment;field#link#0;class#Title#0" />
+            <element signature="docComment;field#target#0;class#Title#0" />
+            <element signature="docComment;field#textStyle#0;class#Title#0" />
+            <element signature="docComment;field#subtext#0;class#Title#0" />
+            <element signature="docComment;field#sublink#0;class#Title#0" />
+            <element signature="docComment;field#subtarget#0;class#Title#0" />
+            <element signature="docComment;field#subtextStyle#0;class#Title#0" />
+            <element signature="docComment;field#textAlign#0;class#Title#0" />
+            <element signature="docComment;field#textVerticalAlign#0;class#Title#0" />
+            <element signature="docComment;field#triggerEvent#0;class#Title#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/axis/Axis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="51" column="4" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#Axis#0" />
+            <element signature="docComment;field#id#0;class#Axis#0" />
+            <element signature="docComment;field#show#0;class#Axis#0" />
+            <element signature="docComment;field#gridIndex#0;class#Axis#0" />
+            <element signature="docComment;field#position#0;class#Axis#0" />
+            <element signature="docComment;field#offset#0;class#Axis#0" />
+            <element signature="docComment;field#type#0;class#Axis#0" />
+            <element signature="docComment;field#nameLocation#0;class#Axis#0" />
+            <element signature="docComment;field#nameTextStyle#0;class#Axis#0" />
+            <element signature="docComment;field#nameGap#0;class#Axis#0" />
+            <element signature="docComment;field#nameRotate#0;class#Axis#0" />
+            <element signature="docComment;field#inverse#0;class#Axis#0" />
+            <element signature="docComment;field#boundaryGap#0;class#Axis#0" />
+            <element signature="docComment;field#min#0;class#Axis#0" />
+            <element signature="docComment;field#max#0;class#Axis#0" />
+            <element signature="docComment;field#scale#0;class#Axis#0" />
+            <element signature="docComment;field#splitNumber#0;class#Axis#0" />
+            <element signature="docComment;field#minInterval#0;class#Axis#0" />
+            <element signature="docComment;field#maxInterval#0;class#Axis#0" />
+            <element signature="docComment;field#interval#0;class#Axis#0" />
+            <element signature="docComment;field#logBase#0;class#Axis#0" />
+            <element signature="docComment;field#silent#0;class#Axis#0" />
+            <element signature="docComment;field#triggerEvent#0;class#Axis#0" />
+            <element signature="docComment;field#axisLine#0;class#Axis#0" />
+            <element signature="docComment;field#axisTick#0;class#Axis#0" />
+            <element signature="docComment;field#axisLabel#0;class#Axis#0" />
+            <element signature="docComment;field#splitLine#0;class#Axis#0" />
+            <element signature="docComment;field#splitArea#0;class#Axis#0" />
+            <element signature="docComment;field#data#0;class#Axis#0" />
+            <element signature="docComment;field#axisPointer#0;class#Axis#0" />
+            <element signature="docComment;field#zlevel#0;class#Axis#0" />
+            <element signature="docComment;field#z#0;class#Axis#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/option/LineOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="20" column="16" selection-start-line="20" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/SeriesData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#SeriesData#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/data/LineSeriesData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;field#symbol#0;class#LineSeriesData#0" />
+            <element signature="docComment;field#symbolSize#0;class#LineSeriesData#0" />
+            <element signature="docComment;field#symbolRotate#0;class#LineSeriesData#0" />
+            <element signature="docComment;field#symbolKeepAspect#0;class#LineSeriesData#0" />
+            <element signature="docComment;field#symbolOffset#0;class#LineSeriesData#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/constant/Symbol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/dto/LineFormatDataDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/util/BarChartUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/util/PieCharUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/BaseSeries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;field#type#0;class#BaseSeries#0" />
+            <element signature="docComment;field#id#0;class#BaseSeries#0" />
+            <element signature="docComment;field#name#0;class#BaseSeries#0" />
+            <element signature="docComment;field#legendHoverLink#0;class#BaseSeries#0" />
+            <element signature="docComment;field#label#0;class#BaseSeries#0" />
+            <element signature="docComment;field#itemStyle#0;class#BaseSeries#0" />
+            <element signature="docComment;field#cursor#0;class#BaseSeries#0" />
+            <element signature="docComment;field#zlevel#0;class#BaseSeries#0" />
+            <element signature="docComment;field#z#0;class#BaseSeries#0" />
+            <element signature="docComment;field#silent#0;class#BaseSeries#0" />
+            <element signature="docComment;field#dimensions#0;class#BaseSeries#0" />
+            <element signature="docComment;field#seriesLayoutBy#0;class#BaseSeries#0" />
+            <element signature="docComment;field#datasetIndex#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animation#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animationThreshold#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animationDuration#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animationEasing#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animationDelay#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animationDurationUpdate#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animationEasingUpdate#0;class#BaseSeries#0" />
+            <element signature="docComment;field#animationDelayUpdate#0;class#BaseSeries#0" />
+            <element signature="docComment;field#tooltip#0;class#BaseSeries#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/series/LineSeries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1059">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="docComment;field#coordinateSystem#0;class#LineSeries#0" />
+            <element signature="docComment;field#xAxisIndex#0;class#LineSeries#0" />
+            <element signature="docComment;field#yAxisIndex#0;class#LineSeries#0" />
+            <element signature="docComment;field#polarIndex#0;class#LineSeries#0" />
+            <element signature="docComment;field#symbol#0;class#LineSeries#0" />
+            <element signature="docComment;field#symbolSize#0;class#LineSeries#0" />
+            <element signature="docComment;field#symbolRotate#0;class#LineSeries#0" />
+            <element signature="docComment;field#symbolKeepAspect#0;class#LineSeries#0" />
+            <element signature="docComment;field#symbolOffset#0;class#LineSeries#0" />
+            <element signature="docComment;field#showSymbol#0;class#LineSeries#0" />
+            <element signature="docComment;field#showAllSymbol#0;class#LineSeries#0" />
+            <element signature="docComment;field#hoverAnimation#0;class#LineSeries#0" />
+            <element signature="docComment;field#stack#0;class#LineSeries#0" />
+            <element signature="docComment;field#cursor#0;class#LineSeries#0" />
+            <element signature="docComment;field#connectNulls#0;class#LineSeries#0" />
+            <element signature="docComment;field#clip#0;class#LineSeries#0" />
+            <element signature="docComment;field#step#0;class#LineSeries#0" />
+            <element signature="docComment;field#lineStyle#0;class#LineSeries#0" />
+            <element signature="docComment;field#areaStyle#0;class#LineSeries#0" />
+            <element signature="docComment;field#smooth#0;class#LineSeries#0" />
+            <element signature="docComment;field#smoothMonotone#0;class#LineSeries#0" />
+            <element signature="docComment;field#sampling#0;class#LineSeries#0" />
+            <element signature="docComment;field#dimensions#0;class#LineSeries#0" />
+            <element signature="docComment;field#encode#0;class#LineSeries#0" />
+            <element signature="docComment;field#data#0;class#LineSeries#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyn/util/LineChartUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getLineOption#0;class#LineChartUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>echarts4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.alibaba:fastjson:1.2.58</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

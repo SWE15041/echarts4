@@ -1,0 +1,191 @@
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2014-2015 abel533@gmail.com
+ *
+ * Permission is hereby granted; free of charge; to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"); to deal
+ * in the Software without restriction; including without limitation the rights
+ * to use; copy; modify; merge; publish; distribute; sublicense; and/or sell
+ * copies of the Software; and to permit persons to whom the Software is
+ * furnished to do so; subject to the following conditions=
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS"; WITHOUT WARRANTY OF ANY KIND; EXPRESS OR
+ * IMPLIED; INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY;
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM; DAMAGES OR OTHER
+ * LIABILITY; WHETHER IN AN ACTION OF CONTRACT; TORT OR OTHERWISE; ARISING FROM;
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+package com.lyn.axis;
+
+import com.lyn.constant.Align;
+import com.lyn.constant.FontStyle;
+import com.lyn.constant.FontWeight;
+import com.lyn.constant.VerticalAlign;
+import lombok.Data;
+
+/**
+ * 坐标轴刻度标签的相关设置。
+ */
+@Data
+public class AxisLabel  {
+
+    /**
+     * 是否显示刻度标签。
+     * 默认值：true
+     */
+    private Boolean show = true;
+    /**
+     * 坐标轴刻度标签的显示间隔，在类目轴中有效。
+     */
+    private Object interval = "auto";
+    /**
+     * 刻度标签是否朝内，默认朝外。
+     * 默认值：false
+     */
+    private Boolean inside = false;
+    /**
+     * 刻度标签旋转的角度，在类目轴的类目标签显示不下的时候可以通过旋转防止标签之间重叠。
+     * <p>
+     * 旋转的角度从 -90 度到 90 度。
+     * <p>
+     * 默认值：0
+     */
+    private Double rotate = 0.0;
+    /**
+     * 刻度标签与轴线之间的距离。
+     * 默认值：8
+     */
+    private Double margin = 8.0;
+    /**
+     * 刻度标签的内容格式器，支持字符串模板和回调函数两种形式。
+     * 默认值：null
+     */
+    private Object formatter;
+
+    /**
+     * 是否显示最小 tick 的 label。可取值 true, false, null。默认自动判定（即如果标签重叠，不会显示最小 tick 的 label）。
+     * 默认值：null
+     */
+    private Boolean showMinLabel;
+    /**
+     * 是否显示最大 tick 的 label。可取值 true, false, null。默认自动判定（即如果标签重叠，不会显示最大 tick 的 label）。
+     */
+    private Boolean showMaxLabel = null;
+
+    /**
+     * 刻度标签文字的颜色
+     */
+    private String color;
+
+    /**
+     * 文字字体的风格
+     */
+    private FontStyle fontStyle = FontStyle.normal;
+
+
+    private Object fontWeight = FontWeight.normal;
+
+    /**
+     * 文字的字体系列
+     * [ default: 'sans-serif' ]
+     */
+    private String fontFamily = "sans-serif";
+
+    private Integer fontSize = 12;
+
+    /**
+     * 文字水平对齐方式，默认自动。
+     */
+    private Align align;
+
+    /**
+     * 文字垂直对齐方式，默认自动。
+     */
+    private VerticalAlign verticalAlign;
+    /**
+     * 行高。
+     */
+    private Double lineHeight;
+    /**
+     * 文字块背景色。
+     */
+    private String backgroundColor = "transparent";
+    /**
+     * 文字块边框宽度。
+     */
+    private String borderColor = "transparent";
+    /**
+     * 文字块的圆角。数组类型
+     * 默认值：0
+     */
+    private Object borderWidth = 0;
+
+    /**
+     * 文字块的圆角。
+     */
+    private Object borderRadius = 0;
+    /**
+     * 文字块的内边距。例如：padding: [3, 4, 5, 6]：表示 [上, 右, 下, 左] 的边距。
+     */
+    private Object padding = 0;
+    /**
+     * 文字块的背景阴影颜色。
+     */
+    private String shadowColor = "transparent";
+    /**
+     * 文字块的背景阴影长度。
+     */
+    private Double shadowBlur = 0.0;
+    /**
+     * 文字块的背景阴影 X 偏移。
+     */
+    private Double shadowOffsetX = 0.0;
+
+    /**
+     * 文字块的背景阴影 Y 偏移。
+     */
+    private Double shadowOffsetY = 0.0;
+    /**
+     * 文字块的宽度。一般不用指定，不指定则自动是文字的宽度。
+     */
+    private String width;
+    /**
+     * 文字块的高度。一般不用指定，不指定则自动是文字的高度
+     */
+    private String height;
+    /**
+     * 文字本身的描边颜色。
+     */
+    private String textBorderColor = "transparent";
+    /**
+     * 文字本身的描边宽度。
+     */
+    private Double textBorderWidth = 0.0;
+
+    /**
+     * 文字本身的阴影颜色。
+     */
+    private String textShadowColor = "transparent";
+
+    /**
+     * 文字本身的阴影长度。
+     */
+    private Double textShadowBlur = 0.0;
+    /**
+     * 文字本身的阴影 X 偏移。
+     */
+    private Double textShadowOffsetX = 0.0;
+
+    /**
+     * 文字本身的阴影 Y 偏移。
+     */
+    private Double textShadowOffsetY = 0.0;
+
+}
