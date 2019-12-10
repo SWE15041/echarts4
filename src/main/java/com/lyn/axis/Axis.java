@@ -13,7 +13,7 @@ import lombok.Data;
  * 坐标轴定义
  */
 @Data
-public class Axis implements Component {
+public abstract class Axis implements Component {
 
     /**
      * 组件 ID。默认不指定。指定则可用于在 option 或者 API 中引用组件。
@@ -45,6 +45,8 @@ public class Axis implements Component {
     private Double offset = 0.0;
 
     /**
+     * 如果没有设置 type，但是设置了 axis.data，则认为 type 是 'category'。
+     * 如果设置了 type 是 'category'，但没有设置 axis.data，则 axis.data 的内容会自动从 series.data 中获取，这会比较方便。
      * 坐标轴类型，X轴默认为类目型'category'，Y轴默认为数值型'value'
      */
     private AxisType type;
@@ -190,7 +192,7 @@ public class Axis implements Component {
      * 类目数据，在类目轴（type: 'category'）中有效。
      * 如果设置了 type 是 'category'，但没有设置 axis.data，则 axis.data 的内容会自动从 series.data 中获取，这会比较方便。
      */
-    private AxisData data;
+    private AxisData[] data;
 
     /**
      * 坐标轴指示器

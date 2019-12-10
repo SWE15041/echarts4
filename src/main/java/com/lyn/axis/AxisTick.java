@@ -26,14 +26,11 @@ package com.lyn.axis;
 
 import com.lyn.style.LineStyle;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.io.Serializable;
 
 /**
- * 坐标轴刻度相关设置。
- *
+ * 坐标轴 刻度 相关设置。
  */
 @Data
 public class AxisTick implements Serializable {
@@ -42,13 +39,13 @@ public class AxisTick implements Serializable {
      * 是否显示坐标轴刻度。
      * 默认值：true
      */
-    private Boolean show = true;
+    private Boolean show;
 
     /**
      * 类目轴中在 boundaryGap 为 true 的时候有效，可以保证刻度线和标签对齐。
      * 默认值：false
      */
-    private Boolean alignWithLabel = false;
+    private Boolean alignWithLabel;
 
     /**
      * 坐标轴刻度的显示间隔，在类目轴中有效。
@@ -60,19 +57,19 @@ public class AxisTick implements Serializable {
      * 小标记显示挑选间隔，默认为'auto'，可选为：
      * 'auto'（自动隐藏显示不下的） | 0（全部显示） | {number}（用户指定选择间隔）
      */
-    private Object interval = "auto";
+    private Object interval;
 
     /**
      * 坐标轴刻度的长度。
      * 默认值：5
      */
-    private Integer length = 5;
+    private Integer length;
 
     /**
      * 坐标轴刻度是否朝内，默认朝外。
      * 默认值：false
      */
-    private Boolean inside = false;
+    private Boolean inside;
 
     /**
      * 属性lineStyle控制线条样式，（详见lineStyle）

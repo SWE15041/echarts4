@@ -32,20 +32,21 @@ import java.io.Serializable;
 
 /**
  * 坐标轴线
- *
- * @author liuzh
+ * 坐标轴 轴线 相关设置。
  */
 @Data
 public class AxisLine implements Serializable {
 
     /**
      * 默认显示，属性show控制显示与否
+     * 默认值：true
      */
-    private Boolean show = true;
+    private Boolean show;
     /**
      * 定位到垂直方向的0值坐标上
+     * 默认值：true
      */
-    private Boolean onZero = true;
+    private Boolean onZero;
 
     /**
      * 当有双轴时，可以用这个属性手动指定，在哪个轴的 0 刻度上。
@@ -57,19 +58,20 @@ public class AxisLine implements Serializable {
      * 默认不显示箭头，即 'none'。
      * 两端都显示箭头可以设置为 'arrow';
      * 只在末端显示箭头可以设置为 ['none', 'arrow']。
+     * 默认值：'none'
      */
-    private Object symbol = "none";
+    private Object symbol;
 
     /**
      * 轴线两边的箭头的大小，第一个数字表示宽度（垂直坐标轴方向），第二个数字表示高度（平行坐标轴方向）。
      * 默认值：[10, 15]
      */
-    private Object symbolSize = "[10, 15]";
+    private Object symbolSize;
 
     /**
      * 轴线两边的箭头的偏移，如果是数组，第一个数字表示起始箭头的偏移，第二个数字表示末端箭头的偏移；如果是数字，表示这两个箭头使用同样的偏移。
      */
-    private Object symbolOffset = "[0，0]";
+    private Object symbolOffset;
 
     /**
      * {color: '#333', width: 1, type: 'solid'}

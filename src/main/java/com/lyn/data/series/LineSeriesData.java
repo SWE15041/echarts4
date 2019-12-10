@@ -1,14 +1,10 @@
-package com.lyn.series;
+package com.lyn.data.series;
 
-import com.lyn.data.MarkPointData;
-import com.lyn.style.ItemStyle;
 import lombok.Data;
 
-/**
- * 图表标注。
- */
 @Data
-public class MarkPoint extends BaseMark {
+public class LineSeriesData extends SeriesData<LineSeriesData> {
+
     /**
      * 单个数据标记的图形。
      */
@@ -39,9 +35,5 @@ public class MarkPoint extends BaseMark {
      * 默认值：[0,0]
      */
     private Object symbolOffset;
-
-    private ItemStyle itemStyle;
-
-    private MarkPointData[] data;
 
 }

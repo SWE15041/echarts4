@@ -1,6 +1,6 @@
 package com.lyn.series;
 
-import com.lyn.data.BarSeriesData;
+import com.lyn.data.series.BarSeriesData;
 import lombok.Data;
 
 @Data

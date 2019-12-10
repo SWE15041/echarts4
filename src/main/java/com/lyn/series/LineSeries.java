@@ -1,6 +1,6 @@
 package com.lyn.series;
 
-import com.lyn.data.LineSeriesData;
+import com.lyn.data.series.LineSeriesData;
 import com.lyn.style.AreaStyle;
 import com.lyn.style.LineStyle;
 import lombok.Data;
@@ -36,8 +36,9 @@ public class LineSeries extends BaseSeries<LineSeries> {
     /**
      * 标记的图形。
      * 可以通过 'image://url' 设置为图片，其中 URL 为图片的链接，或者 dataURI。
+     * 可选 ：symbol.xxx|'image://url....'
      */
-    private String symbol;
+    private Object symbol;
 
     /**
      * 标记的大小，可以设置成诸如 10 这样单一的数字，也可以用数组分开表示宽和高，例如 [20, 10] 表示标记宽为20，高为10。

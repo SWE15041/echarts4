@@ -1,7 +1,7 @@
 package com.lyn.series;
 
 import com.lyn.common.LabelLine;
-import com.lyn.data.PieSeriesData;
+import com.lyn.data.series.PieSeriesData;
 import lombok.Data;
 
 @Data

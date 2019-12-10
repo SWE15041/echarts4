@@ -3,18 +3,18 @@ package com.lyn.style;
 import lombok.Data;
 
 /**
- * 折线拐点标志的样式
+ * 标注的样式。
  * 图形样式
  * 支持: line | pie
  */
 @Data
 public class ItemStyle extends BaseStyle<ItemStyle> {
-
-    public ItemStyle() {
-        this.setBorderColor("#000");
-        this.setBorderWidth(0.0);
-        this.setBorderType("solid");
-    }
+//
+//    public ItemStyle() {
+//        this.setBorderColor("#000");
+//        this.setBorderWidth(0.0);
+//        this.setBorderType("solid");
+//    }
 }
 
 //    /**

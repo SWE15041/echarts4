@@ -35,10 +35,10 @@ import java.io.Serializable;
 @Data
 public class AreaStyle extends BaseStyle<AreaStyle> implements Serializable {
 
-    public AreaStyle() {
-        super();
-        this.setColor("['rgba(250,250,250,0.3)','rgba(200,200,200,0.3)']");
-    }
+//    public AreaStyle() {
+//        super();
+//        this.setColor("['rgba(250,250,250,0.3)','rgba(200,200,200,0.3)']");
+//    }
 }
 
 //    /**

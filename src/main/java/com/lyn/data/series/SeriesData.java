@@ -22,48 +22,27 @@
  * THE SOFTWARE.
  */
 
-package com.lyn.axis;
+package com.lyn.data.series;
 
-import com.lyn.constant.LineType;
-import com.lyn.style.LineStyle;
+import com.lyn.common.Emphasis;
+import com.lyn.common.Tooltip;
+import com.lyn.style.ItemStyle;
+import com.lyn.style.LabelStyle;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.io.Serializable;
 
 /**
- * 坐标轴在 grid 区域中的分隔线。
+ * Description: Series.Data
  */
 @Data
-public class SplitLine implements Serializable {
+public abstract class SeriesData<T> implements Serializable {
 
-    /**
-     * 默认显示，属性show控制显示与否
-     * 默认值：true
-     */
-    private Boolean show ;
-    /**
-     * 小标记是否显示为间隔，默认等于boundaryGap
-     * 默认值： "auto"
-     */
-    private Object interval ;
-    /**
-     * 属性lineStyle（详见lineStyle）控制线条样式
-     */
-    private LineStyle lineStyle;
+    private String name;
+    private Double value;
+    private LabelStyle label;
+    private ItemStyle itemStyle;
+    private Emphasis emphasis;
+    private Tooltip tooltip;
 
-    public LineStyle getLineStyle() {
-        if (lineStyle != null) {
-            lineStyle = new LineStyle();
-            lineStyle.setType(LineType.solid);
-            lineStyle.setColor("#ccc");
-            lineStyle.setWidth(1.0);
-        }
-        return lineStyle;
-    }
-
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
 }

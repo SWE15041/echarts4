@@ -32,7 +32,6 @@ import java.io.Serializable;
 /**
  * Description : LegendData
  *
- * @author liuzh
  */
 @Data
 public class LegendData implements Serializable {

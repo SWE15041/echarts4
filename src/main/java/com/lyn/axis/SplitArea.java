@@ -31,21 +31,21 @@ import java.io.Serializable;
 
 /**
  * 坐标轴在 grid 区域中的分隔区域，默认不显示。
- *
  */
 @Data
 public class SplitArea implements Serializable {
 
     /**
      * 坐标轴分隔区域的显示间隔，在类目轴中有效。默认同 axisLabel.interval 一样。
+     * 默认值： "auto";
      */
-    private Object interval = "auto";
+    private Object interval;
 
     /**
      * 是否显示分隔区域。 默认不显示
      * 默认值：false
      */
-    private Boolean show = false;
+    private Boolean show;
     /**
      * 分隔区域的样式设置。
      */

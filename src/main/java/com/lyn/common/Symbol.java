@@ -1,18 +1,18 @@
-package com.lyn.series;
+package com.lyn.common;
 
-import com.lyn.data.MarkPointData;
-import com.lyn.style.ItemStyle;
 import lombok.Data;
 
 /**
- * 图表标注。
+ * 标记
  */
 @Data
-public class MarkPoint extends BaseMark {
+public class Symbol {
+
     /**
      * 单个数据标记的图形。
+     * 可选值： SymbolType.xxx | "path://"
      */
-    private String symbol;
+    private Object symbol;
 
     /**
      * 单个数据标记的大小，可以设置成诸如 10 这样单一的数字，也可以用数组分开表示宽和高，例如 [20, 10] 表示标记宽为20，高为10。
@@ -39,9 +39,4 @@ public class MarkPoint extends BaseMark {
      * 默认值：[0,0]
      */
     private Object symbolOffset;
-
-    private ItemStyle itemStyle;
-
-    private MarkPointData[] data;
-
 }

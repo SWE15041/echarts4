@@ -1,33 +1,35 @@
 package com.lyn.series;
 
-public class MarkLine {
-    /**
-     * 特殊的标注类型，用于标注最大值最小值等。
-     * 值：min|max|average
-     */
-    private String type;
+import com.lyn.data.MarkLineData;
+import com.lyn.style.LineStyle;
+import lombok.Data;
+
+/**
+ * 图表标线。
+ */
+@Data
+public class MarkLine extends BaseMark {
 
     /**
-     * 标注名
+     * 标记的图形。
+     * 可以通过 'image://url' 设置为图片，其中 URL 为图片的链接，或者 dataURI。
+     * 可选 ：symbol.xxx|'image://url....'
      */
-    private String name;
+    private Object symbol;
 
-//    private List<Double> coord=new ArrayList<>(2);
+    /**
+     * 标记的大小，可以设置成诸如 10 这样单一的数字，也可以用数组分开表示宽和高，例如 [20, 10] 表示标记宽为20，高为10。
+     * 默认值 : 4
+     */
+    private Object symbolSize;
 
+    /**
+     * 标线数值的精度，在显示平均值线的时候有用。
+     */
+    private Double precision;
 
-    public String getType() {
-        return type;
-    }
+    private LineStyle lineStyle;
 
-    public void setType(String type) {
-        this.type = type;
-    }
+    private MarkLineData[] data;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

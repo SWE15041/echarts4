@@ -32,7 +32,7 @@ import com.lyn.style.LabelStyle;
 import lombok.Data;
 
 /**
- * 坐标轴刻度标签的相关设置。
+ * 坐标轴刻度 标签 的相关设置。
  */
 @Data
 public class AxisLabel extends LabelStyle {

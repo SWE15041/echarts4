@@ -24,7 +24,7 @@
 
 package com.lyn.data;
 
-import com.lyn.constant.Symbol;
+import com.lyn.constant.SymbolType;
 import com.lyn.style.ItemStyle;
 import com.lyn.style.TextStyle;
 import lombok.Getter;
@@ -38,7 +38,6 @@ import java.util.List;
 /**
  * Description: BaseData
  *
- * @author liuzh
  */
 @Getter
 @Setter
@@ -297,10 +296,10 @@ public abstract class BaseData<T> implements Serializable {
     /**
      * 设置symbol值
      *
-     * @param symbol
+     * @param symbolType
      */
-    public T symbol(Symbol symbol) {
-        this.symbol = symbol.name();
+    public T symbol(SymbolType symbolType) {
+        this.symbol = symbolType.name();
         return (T) this;
     }
 

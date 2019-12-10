@@ -33,7 +33,6 @@ import java.io.Serializable;
 /**
  * 组件的基础类
  *
- * @author liuzh
  */
 @Data
 public abstract class Basic<T> implements Serializable {
@@ -82,27 +81,27 @@ public abstract class Basic<T> implements Serializable {
     private Integer z;
 
     /**
-     * treemap 组件离容器左侧的距离
+     * xxx 组件离容器左侧的距离
      */
     private Object left;
     /**
-     * treemap 组件离容器上侧的距离
+     * xxx 组件离容器上侧的距离
      */
     private Object top;
     /**
-     * treemap 组件离容器右侧的距离
+     * xxx 组件离容器右侧的距离
      */
     private Object right;
     /**
-     * treemap 组件离容器下侧的距离
+     * xxx 组件离容器下侧的距离
      */
     private Object bottom;
     /**
-     * treemap 组件的宽度
+     * xxx 组件的宽度
      */
     private Object width;
     /**
-     * treemap 组件的高度
+     * xxx 组件的高度
      */
     private Object height;
     /**
