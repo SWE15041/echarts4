@@ -23,6 +23,10 @@ public class LineFormatDataDTO implements Serializable {
     private String xAxisName;
     private Object xAxisNameLocation;
     private Double xAxisNameGap;
+    /**
+     * 类目值与刻度对齐
+     */
+    private Boolean xAxisAlignWithLabel;
     private List xAxisData;
 
     /**
@@ -32,11 +36,5 @@ public class LineFormatDataDTO implements Serializable {
     private Object yAxisNameLocation;
     private Double yAxisNameGap;
     private String yAxisUnit;
-
-    /**
-     * 图例数组
-     */
-    private LegendDTO legendDTO;
-
 
 }

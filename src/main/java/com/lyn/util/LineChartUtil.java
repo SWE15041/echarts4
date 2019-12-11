@@ -1,13 +1,14 @@
 package com.lyn.util;
 
 import com.alibaba.fastjson.JSONObject;
-import com.lyn.axis.Axis;
 import com.lyn.axis.AxisLabel;
+import com.lyn.axis.AxisTick;
 import com.lyn.axis.XAxis;
 import com.lyn.axis.YAxis;
 import com.lyn.common.Legend;
 import com.lyn.common.Symbol;
 import com.lyn.common.Title;
+import com.lyn.constant.AxisNameLocation;
 import com.lyn.constant.AxisType;
 import com.lyn.constant.ChartType;
 import com.lyn.constant.LegendType;
@@ -40,15 +41,17 @@ public class LineChartUtil {
         String xAxisName = lineFormatDataDTO.getXAxisName();
         Double xAxisNameGap = lineFormatDataDTO.getXAxisNameGap();
         Object xAxisNameLocation = lineFormatDataDTO.getXAxisNameLocation();
+        Boolean alignWithLabel = lineFormatDataDTO.getXAxisAlignWithLabel();
         List xAxisData = lineFormatDataDTO.getXAxisData();
-        XAxis xAxis = buildXAxis(xAxisName, AxisType.category, xAxisData, xAxisNameGap, xAxisNameLocation);
+        XAxis xAxis = buildXAxis(xAxisName, AxisType.category, xAxisData, xAxisNameGap, xAxisNameLocation, alignWithLabel);
         lineOption.setXAxis(xAxis);
 
         String yAxisName = lineFormatDataDTO.getYAxisName();
         Double yAxisNameGap = lineFormatDataDTO.getYAxisNameGap();
         Object yAxisNameLocation = lineFormatDataDTO.getYAxisNameLocation();
         String yAxisUnit = lineFormatDataDTO.getYAxisUnit();
-        buildYAxis(yAxisName, AxisType.value, yAxisNameGap, yAxisNameLocation, yAxisUnit);
+        YAxis yAxis = buildYAxis(yAxisName, AxisType.value, yAxisNameGap, yAxisNameLocation, yAxisUnit);
+        lineOption.setYAxis(yAxis);
 
         if (legendDTO != null) {
             Legend legend = buildLegend(legendDTO);
@@ -69,7 +72,6 @@ public class LineChartUtil {
 
     }
 
-
     public static Title buildTitle(String text, String subText, Boolean show) {
         Title title = new Title();
         title.setText(text);
@@ -78,7 +80,7 @@ public class LineChartUtil {
         return title;
     }
 
-    public static XAxis buildXAxis(String name, AxisType type, List data, Double nameGap, Object nameLocation) {
+    public static XAxis buildXAxis(String name, AxisType type, List data, Double nameGap, Object nameLocation, Boolean alignWithLabel) {
         if (data == null && data.size() <= 0) {
             return null;
         }
@@ -94,13 +96,20 @@ public class LineChartUtil {
         if (nameLocation != null) {
             xAxis.setNameLocation(nameLocation);
         }
+        if (alignWithLabel != null && alignWithLabel == true) {
+            AxisTick axisTick = new AxisTick();
+            axisTick.setAlignWithLabel(alignWithLabel);
+            xAxis.setAxisTick(axisTick);
+        }
+
         List<AxisData> axisDataList = new ArrayList<>();
         for (Object o : data) {
             AxisData temp = new AxisData();
             temp.setValue(o);
             axisDataList.add(temp);
         }
-        xAxis.setData(((AxisData[]) axisDataList.toArray()));
+        AxisData[] axisData = new AxisData[axisDataList.size()];
+        xAxis.setData((axisDataList.toArray(axisData)));
         return xAxis;
     }
 
@@ -193,68 +202,48 @@ public class LineChartUtil {
         return null;
     }
 
-    public static LineOption getLineOption(LineSeries[] series, String text, String subText, String xAxisName, String yAxisName) {
-        if (series == null || series.length <= 0) {
-            LineOption lineOption = new LineOption();
-            Title title = new Title();
-            title.setText(text);
-            title.setSubtext(subText);
-
-            Axis xAxis = new XAxis();
-            xAxis.setName(xAxisName);
-
-            Axis yAxis = new YAxis();
-            yAxis.setName(yAxisName);
-
-            lineOption.setTitle(title);
-            lineOption.setXAxis(xAxis);
-            lineOption.setYAxis(yAxis);
-
-            String string = JSONObject.toJSONString(lineOption);
-            System.out.println(string);
-        }
-
-
-        return null;
-    }
-
-
-    public static LineSeries[] formatData(List<?> originalData) {
-        if (originalData == null && originalData.size() <= 0) {
-            return null;
-        }
-        LineSeries[] series = new LineSeries[originalData.size()];
-//        LineSeriesData[]
-        return null;
-    }
-
     public static void main(String[] args) {
-//        getLineOption(null, "a", "b", "xxx", "yyy");
 
-        //设置标题、副标题
-        String text = "标题";
-        String subText = "副标题";
-        Title title = buildTitle(text, subText, true);
+        LineFormatDataDTO lineDTO = new LineFormatDataDTO();
+        lineDTO.setText("机器流量图");
+        lineDTO.setSubText("pps影音");
+        lineDTO.setShow(true);
 
-        //设置x轴
+        lineDTO.setXAxisName("时间");
+        lineDTO.setXAxisNameGap(20.0);
+        lineDTO.setXAxisNameLocation(AxisNameLocation.center);
+        lineDTO.setXAxisAlignWithLabel(true);
+        List<String> xAxisData = new ArrayList<>();
+        xAxisData.add("星期一");
+        xAxisData.add("星期二");
+        xAxisData.add("星期三");
+        xAxisData.add("星期四");
+        lineDTO.setXAxisData(xAxisData);
 
-        //设置y轴
+        lineDTO.setYAxisName("流量");
+        lineDTO.setYAxisNameGap(80.0);
+        lineDTO.setYAxisUnit("Mbps");
+        lineDTO.setYAxisNameLocation(AxisNameLocation.center);
 
-        //设置图例
+        LegendDTO legendDTO = new LegendDTO();
+//        lineDTO.setLegendDTO(legendDTO);
 
-        //展示系列数据
+        List<SeriesDTO> seriesDTOS = new ArrayList<>();
+        SeriesDTO seriesDTO = new SeriesDTO();
+        seriesDTO.setName("吐出流量");
+        seriesDTO.setType(ChartType.line);
+        List<Double> seriesData1 = new ArrayList<>();
+        seriesData1.add(10.0);
+        seriesData1.add(20.0);
+        seriesData1.add(30.0);
+        seriesData1.add(30.0);
+        seriesDTO.setData(seriesData1);
+        seriesDTOS.add(seriesDTO);
 
-        //其他，如工具栏、提示框
-        Legend legend = new Legend();
-        List<String> data = new ArrayList<>();
-        data.add("1");
-        data.add("2");
-        data.add("3");
-        List<LegendData> legendDataList = new ArrayList<>();
-        data.forEach(o -> legendDataList.add(new LegendData(o)));
-        LegendData[] legendData = new LegendData[legendDataList.size()];
-        legend.setData(legendDataList.toArray(legendData));
-        System.out.println(legend);
+        LineOption lineOption = buildOption(lineDTO, legendDTO, seriesDTOS);
+        String option = JSONObject.toJSONString(lineOption);
+        System.out.println(option);
+
     }
 
 }
