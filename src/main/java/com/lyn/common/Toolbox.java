@@ -32,7 +32,6 @@ import lombok.Setter;
 
 /**
  * 工具栏。内置有导出图片，数据视图，动态类型切换，数据区域缩放，重置五个工具。
- * extends Basic<Toolbox>
  */
 @Data
 public class Toolbox  implements Component {

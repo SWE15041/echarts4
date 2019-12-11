@@ -1,6 +1,12 @@
 package com.lyn.dto;
 
-public class LineFormatDataDTO {
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.List;
+
+@Data
+public class LineFormatDataDTO implements Serializable {
 
 
     /**
@@ -8,24 +14,29 @@ public class LineFormatDataDTO {
      */
     private String text;
     private String subText;
+    private Boolean show;
     //todo 标题位置待定
 
     /**
      * x轴参数定义
      */
     private String xAxisName;
-    private String xAxisNameLocation;
-    private String xAxisNameGap;
-    private Object[] xAxisData;
+    private Object xAxisNameLocation;
+    private Double xAxisNameGap;
+    private List xAxisData;
 
     /**
      * y轴参数定义
      */
     private String yAxisName;
-    private String yAxisNameLocation;
-    private String yAxisNameGap;
-    private Object[] yAxisData;
-    private String unit;
+    private Object yAxisNameLocation;
+    private Double yAxisNameGap;
+    private String yAxisUnit;
+
+    /**
+     * 图例数组
+     */
+    private LegendDTO legendDTO;
 
 
 }

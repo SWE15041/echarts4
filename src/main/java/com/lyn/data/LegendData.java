@@ -52,6 +52,7 @@ public class LegendData implements Serializable {
      */
     private String icon;
 
+    public LegendData(){}
     /**
      * 构造函数,参数:name
      *

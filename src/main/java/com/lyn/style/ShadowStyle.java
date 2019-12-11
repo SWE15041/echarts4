@@ -34,9 +34,9 @@ import java.io.Serializable;
 @Data
 public class ShadowStyle extends BaseStyle<ShadowStyle> implements Serializable {
 
-    public ShadowStyle() {
-        this.setColor("rgba(150,150,150,0.3)");
-    }
+//    public ShadowStyle() {
+//        this.setColor("rgba(150,150,150,0.3)");
+//    }
 
 
 }

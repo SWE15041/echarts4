@@ -32,7 +32,6 @@ import lombok.Data;
 /**
  * 提示框配置
  * 注意：series.tooltip 仅在 tooltip.trigger 为 'item' 时有效。
- * extends Basic<Tooltip>
  */
 @Data
 public class Tooltip implements Component {

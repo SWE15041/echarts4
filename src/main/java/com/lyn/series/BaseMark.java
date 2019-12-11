@@ -1,20 +1,18 @@
 package com.lyn.series;
 
 import com.lyn.common.Emphasis;
-import com.lyn.style.ItemStyle;
 import com.lyn.style.LabelStyle;
-import com.sun.tools.javac.jvm.Items;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
-public  abstract class BaseMark  implements Serializable {
+public abstract class BaseMark implements Serializable {
 
 
     private Boolean silent;
     private LabelStyle label;
-//    private ItemStyle itemStyle;
+    //    private ItemStyle itemStyle;
     private Emphasis emphasis;
     /**
      * 是否开启动画。

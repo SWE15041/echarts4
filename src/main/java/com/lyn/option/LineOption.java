@@ -1,12 +1,8 @@
 package com.lyn.option;
 
 import com.lyn.axis.Axis;
-import com.lyn.common.DataZoom;
-import com.lyn.common.Title;
-import com.lyn.common.Toolbox;
-import com.lyn.common.Tooltip;
+import com.lyn.common.*;
 import com.lyn.series.LineSeries;
-import com.sun.javafx.charts.Legend;
 import lombok.Data;
 
 @Data

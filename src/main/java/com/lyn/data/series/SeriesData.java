@@ -36,7 +36,7 @@ import java.io.Serializable;
  * Description: Series.Data
  */
 @Data
-public abstract class SeriesData<T> implements Serializable {
+public abstract class SeriesData implements Serializable {
 
     private String name;
     private Double value;
@@ -44,5 +44,12 @@ public abstract class SeriesData<T> implements Serializable {
     private ItemStyle itemStyle;
     private Emphasis emphasis;
     private Tooltip tooltip;
+
+    public SeriesData() {
+    }
+
+    public SeriesData(Double value) {
+        this.value = value;
+    }
 
 }

@@ -3,7 +3,7 @@ package com.lyn.data.series;
 import lombok.Data;
 
 @Data
-public class LineSeriesData extends SeriesData<LineSeriesData> {
+public class LineSeriesData extends SeriesData {
 
     /**
      * 单个数据标记的图形。
@@ -35,5 +35,12 @@ public class LineSeriesData extends SeriesData<LineSeriesData> {
      * 默认值：[0,0]
      */
     private Object symbolOffset;
+
+    public LineSeriesData() {
+    }
+
+    public LineSeriesData(Double value) {
+        super(value);
+    }
 
 }

@@ -2,7 +2,6 @@ package com.lyn.axis;
 
 import com.lyn.common.AxisPointer;
 import com.lyn.common.Component;
-import com.lyn.constant.AxisNameLocation;
 import com.lyn.constant.AxisPosition;
 import com.lyn.constant.AxisType;
 import com.lyn.data.AxisData;
@@ -24,12 +23,13 @@ public abstract class Axis implements Component {
      * 是否显示坐标轴
      * 默认值：true
      */
-    private Boolean show = true;
+    private Boolean show;
 
     /**
      * x|y 轴所在的 grid 的索引，默认位于第一个 grid
+     * 默认值：0
      */
-    private Double gridIndex = 0.0;
+    private Double gridIndex;
 
     /**
      * x轴：默认 grid 中的第一个 x 轴在 grid 的下方（'bottom'），第二个 x 轴视第一个 x 轴的位置放在另一侧。
@@ -42,7 +42,7 @@ public abstract class Axis implements Component {
      * 相对于x|y轴的偏移量
      * 默认值：0
      */
-    private Double offset = 0.0;
+    private Double offset;
 
     /**
      * 如果没有设置 type，但是设置了 axis.data，则认为 type 是 'category'。
@@ -59,8 +59,9 @@ public abstract class Axis implements Component {
     /**
      * 坐标轴名称显示位置。
      * [ default: 'end' ]
+     * 可选值：AxisNameLocation.xxx|数值|百分值
      */
-    private AxisNameLocation nameLocation = AxisNameLocation.end;
+    private Object nameLocation;
 
     /**
      * 坐标轴名称的文字样式。
@@ -69,8 +70,9 @@ public abstract class Axis implements Component {
 
     /**
      * 坐标轴名称与轴线之间的距离。
+     * 默认值：15
      */
-    private Double nameGap = 15.0;
+    private Double nameGap;
 
     /**
      * 坐标轴名字旋转，角度值。
@@ -82,7 +84,7 @@ public abstract class Axis implements Component {
      * 是否是反向坐标轴。ECharts 3 中新加。
      * 默认值：false
      */
-    private Boolean inverse = false;
+    private Boolean inverse;
 
     /**
      * 坐标轴两边留白策略，类目轴和非类目轴的设置和表现不一样。
@@ -115,8 +117,9 @@ public abstract class Axis implements Component {
      * 是否是脱离 0 值比例。设置成 true 后坐标刻度不会强制包含零刻度。在双数值轴的散点图中比较有用。
      * <p>
      * 在设置 min 和 max 之后该配置项无效。
+     * 默认值：   false
      */
-    private Boolean scale = false;
+    private Boolean scale;
 
     /**
      * 坐标轴的分割段数，需要注意的是这个分割段数只是个预估值，最后实际显示的段数会在这个基础上根据分割后坐标轴刻度显示的易读程度作调整。
@@ -124,14 +127,14 @@ public abstract class Axis implements Component {
      * 在类目轴中无效。
      * 默认值：5
      */
-    private Double splitNumber = 5.0;
+    private Double splitNumber;
 
     /**
      * 自动计算的坐标轴最小间隔大小。
      * 只在数值轴或时间轴中（type: 'value' 或 'time'）有效。
      * 默认值：0
      */
-    private Double minInterval = 0.0;
+    private Double minInterval;
 
     /**
      * 自动计算的坐标轴最大间隔大小。
@@ -149,19 +152,19 @@ public abstract class Axis implements Component {
      * 对数轴的底数，只在对数轴中（type: 'log'）有效。
      * 默认值：10
      */
-    private Double logBase = 10.0;
+    private Double logBase;
 
     /**
      * 坐标轴是否是静态无法交互。
      * 默认值：false
      */
-    private Boolean silent = false;
+    private Boolean silent;
 
     /**
      * 坐标轴的标签是否响应和触发鼠标事件，默认不响应。
      * 默认值：false
      */
-    private Boolean triggerEvent = false;
+    private Boolean triggerEvent;
 
     /**
      * 坐标轴轴线相关设置。
@@ -203,7 +206,7 @@ public abstract class Axis implements Component {
      * X|Y 轴所有图形的 zlevel 值。
      * 默认值：0
      */
-    private Double zlevel = 0.0;
+    private Double zlevel;
 
     /**
      * X|Y 轴组件的所有图形的z值。控制图形的前后顺序。z值小的图形会被z值大的图形覆盖。

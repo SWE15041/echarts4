@@ -24,6 +24,7 @@
 
 package com.lyn.common;
 
+import com.lyn.constant.Orient;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -64,13 +65,35 @@ public abstract class Basic<T> implements Serializable {
      */
     private Integer borderWidth;
     /**
+     * 圆角半径，单位px，支持传入数组分别指定 4 个圆角半径。 如:
+     *
+     * borderRadius: 5, // 统一设置四个角的圆角大小
+     * borderRadius: [5, 5, 0, 0] //（顺时针左上，右上，右下，左下）
+     *
+     * 默认值：0
+     */
+    private Object borderRadius;
+    /**
      * 标题内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
      */
     private Object padding;
     /**
      * 主副标题纵向间隔，单位px，默认为10
      */
-    private Integer itemGap;
+    private Double itemGap;
+
+    /**
+     * 图例标记的图形宽度。
+     * 默认值：25
+     */
+    private Double itemWidth;
+
+    /**
+     * 图例标记的图形高度。
+     * 默认值：14
+     */
+    private Double itemHeight;
+
     /**
      * 一级层叠控制
      */
@@ -79,7 +102,6 @@ public abstract class Basic<T> implements Serializable {
      * 二级层叠控制
      */
     private Integer z;
-
     /**
      * xxx 组件离容器左侧的距离
      */
@@ -104,6 +126,15 @@ public abstract class Basic<T> implements Serializable {
      * xxx 组件的高度
      */
     private Object height;
+
+    /**
+     * 图例列表的布局朝向。
+     * 可选：
+     *  -'horizontal'
+     *  -'vertical'
+     *  默认值：'horizontal'
+     */
+    private Orient orient;
     /**
      * 图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果
      */
