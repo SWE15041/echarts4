@@ -1,10 +1,12 @@
 package com.lyn.dto;
 
 import com.lyn.constant.LegendType;
+import com.lyn.constant.Orient;
 import com.lyn.data.LegendData;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Map;
 
 @Data
 public class LegendDTO {
@@ -29,6 +31,15 @@ public class LegendDTO {
      */
     private Object bottom;
 
+    /**
+     * 图例位置
+     */
+//    private Map<String,String> position;
+
+    /**
+     * 图例布局朝向
+     */
+    private Orient orient;
     /**
      * 图例名称数组
      */

@@ -81,6 +81,23 @@ public class PieSeries extends BaseSeries<PieSeries> {
      */
     private LabelLine labelLine;
 
+    /**
+     * 饼图的中心（圆心）坐标.
+     * 数值数组[2]: 数组的第一项是横坐标，第二项是纵坐标。例子：center: [400, 300]
+     * 百分比数组[2]: 支持设置成百分比，设置成百分比时第一项是相对于容器宽度，第二项是相对于容器高度。例子：center: ['50%', '50%']
+     * 默认值：['50%', '50%']
+     */
+    private Object[] center = new Object[2];
+
+    /**
+     * 饼图的半径。可以为如下类型：
+     * 数值：直接指定外半径值。
+     * 百分比：例如，'20%'，表示外半径为可视区尺寸（容器高宽中较小一项）的 20% 长度。
+     * 数组[2]：数组的第一项是内半径，第二项是外半径。每一项遵从上述 number string 的描述。
+     * 默认值： [0, '75%']
+     */
+    private Object radius;
+
     private PieSeriesData[] data;
 
 }

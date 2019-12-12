@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class SeriesDTO {
+public class LineSeriesDTO {
     /**
      * 系列名称
      */
@@ -19,4 +19,5 @@ public class SeriesDTO {
      * 系列数据
      */
     private List<Double> data;
+
 }

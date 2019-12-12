@@ -161,5 +161,6 @@ public class Legend extends Basic<Legend> implements Component {
      */
     private Double selectorButtonGap;
 
+
 }
 

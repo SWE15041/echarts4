@@ -6,8 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Data
-public class LineFormatDataDTO implements Serializable {
-
+public class LineChartDataDTO implements Serializable {
 
     /**
      * 标题定义

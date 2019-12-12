@@ -1,6 +1,5 @@
 package com.lyn.util;
 
-import com.alibaba.fastjson.JSONObject;
 import com.lyn.axis.AxisLabel;
 import com.lyn.axis.AxisTick;
 import com.lyn.axis.XAxis;
@@ -8,28 +7,50 @@ import com.lyn.axis.YAxis;
 import com.lyn.common.Legend;
 import com.lyn.common.Symbol;
 import com.lyn.common.Title;
-import com.lyn.constant.AxisNameLocation;
 import com.lyn.constant.AxisType;
 import com.lyn.constant.ChartType;
 import com.lyn.constant.LegendType;
+import com.lyn.constant.Orient;
 import com.lyn.data.AxisData;
 import com.lyn.data.LegendData;
 import com.lyn.data.series.LineSeriesData;
+import com.lyn.data.series.PieSeriesData;
 import com.lyn.dto.LegendDTO;
 import com.lyn.dto.LineChartDataDTO;
 import com.lyn.dto.LineSeriesDTO;
 import com.lyn.option.LineOption;
+import com.lyn.option.PieOption;
 import com.lyn.series.LineSeries;
 import com.lyn.series.MarkLine;
 import com.lyn.series.MarkPoint;
+import com.lyn.series.PieSeries;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class LineChartUtil {
+/**
+ * 组装option
+ */
+public class EChartsUtil {
 
-    public static LineOption buildOption(LineChartDataDTO lineChartDataDTO, LegendDTO legendDTO, List<LineSeriesDTO> lineSeriesDTOList) {
+    /**
+     * 数值格式：纯数值|含百分号的数值
+     */
+    private static final String RADIUS_PATTERN = "^(\\d+(\\.\\d+)?%?)(,(\\d+(\\.\\d+)?%?))?$";
 
+    /**
+     * 生成折线图option
+     *
+     * @param lineChartDataDTO
+     * @param legendDTO
+     * @param lineSeriesDTOList
+     * @return
+     */
+    public static LineOption buildLineOption(LineChartDataDTO lineChartDataDTO, LegendDTO legendDTO, List<LineSeriesDTO> lineSeriesDTOList) {
         LineOption lineOption = new LineOption();
 
         String text = lineChartDataDTO.getText();
@@ -134,7 +155,7 @@ public class LineChartUtil {
         return yAxis;
     }
 
-    private static Legend buildLegend(LegendType type, Object left, Object top, Object right, Object bottom, List<String> data) {
+    public static Legend buildLegend(LegendType type, Object left, Object top, Object right, Object bottom, List<String> data, Orient orient) {
         Legend legend = new Legend();
         if (type == null) {
             type = LegendType.plain;
@@ -152,6 +173,9 @@ public class LineChartUtil {
         if (bottom != null) {
             legend.setBottom(bottom);
         }
+        if (orient != null) {
+            legend.setOrient(orient);
+        }
         if (data != null && data.size() > 0) {
             List<LegendData> legendDataList = new ArrayList<>();
             data.forEach(o -> legendDataList.add(new LegendData(o)));
@@ -167,12 +191,13 @@ public class LineChartUtil {
         Object top = dto.getTop();
         Object right = dto.getRight();
         Object bottom = dto.getBottom();
+        Orient orient = dto.getOrient();
         List<String> data = dto.getData();
-        Legend legend = buildLegend(type, left, top, right, bottom, data);
+        Legend legend = buildLegend(type, left, top, right, bottom, data, orient);
         return legend;
     }
 
-    private static LineSeries buildLineSeries(String name, ChartType type, List<Double> data, Symbol symbol, MarkLine markLine, MarkPoint markPoint) {
+    public static LineSeries buildLineSeries(String name, ChartType type, List<Double> data, Symbol symbol, MarkLine markLine, MarkPoint markPoint) {
         if (data == null && data.size() <= 0) {
             return null;
         }
@@ -198,47 +223,81 @@ public class LineChartUtil {
         return lineSeries;
     }
 
-    public static void main(String[] args) {
+    /**
+     * 生成饼图option
+     *
+     * @param text          标题
+     * @param subText       副标题
+     * @param legend        图例
+     * @param pieSeriesList 系列
+     * @return
+     */
+    public static PieOption buildPieOption(String text, String subText, Legend legend, List<PieSeries> pieSeriesList) {
+        PieOption pieOption = new PieOption();
+        Title title = buildTitle(text, subText, true);
+        pieOption.setTitle(title);
+        pieOption.setLegend(legend);
+        PieSeries[] pieSeries = new PieSeries[pieSeriesList.size()];
+        pieOption.setSeries(pieSeriesList.toArray(pieSeries));
+        return pieOption;
+    }
 
-        LineChartDataDTO lineDTO = new LineChartDataDTO();
-        lineDTO.setText("机器流量图");
-        lineDTO.setSubText("pps影音");
-        lineDTO.setShow(true);
+    /**
+     * 创建饼图基本系列
+     *
+     * @param name   系列名称
+     * @param type   默认为饼图系列
+     * @param center 饼图圆心位置
+     * @param radius 饼图半径
+     * @param data   系列中的数值内容数组
+     * @return
+     */
+    public static PieSeries buildPieSeries(String name, ChartType type, Object[] center, String radius, Map<String, Double> data) {
+        if (data == null || data.size() <= 0) {
+            return null;
+        }
+        PieSeries pieSeries = new PieSeries();
+        pieSeries.setName(name);
+        type = type == null ? ChartType.pie : type;
+        pieSeries.setType(type);
+        if (center != null && center.length == 2) {
+            pieSeries.setCenter(center);
+        }
+        if (radius != null && isRadius(radius)) {
+            pieSeries.setRadius(radius);
+        }
+        List<PieSeriesData> pieSeriesDataList = new ArrayList<>();
+        Iterator<Map.Entry<String, Double>> iterator = data.entrySet().stream().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Double> next = iterator.next();
+            String key = next.getKey();
+            Double value = next.getValue();
+            PieSeriesData pieSeriesData = new PieSeriesData();
+            pieSeriesData.setName(key);
+            pieSeriesData.setValue(value);
+            pieSeriesDataList.add(pieSeriesData);
+        }
+        PieSeriesData[] pieSeriesData = new PieSeriesData[pieSeriesDataList.size()];
+        pieSeries.setData(pieSeriesDataList.toArray(pieSeriesData));
+        return pieSeries;
+    }
 
-        lineDTO.setXAxisName("时间");
-        lineDTO.setXAxisNameGap(20.0);
-        lineDTO.setXAxisNameLocation(AxisNameLocation.center);
-        lineDTO.setXAxisAlignWithLabel(true);
-        List<String> xAxisData = new ArrayList<>();
-        xAxisData.add("星期一");
-        xAxisData.add("星期二");
-        xAxisData.add("星期三");
-        xAxisData.add("星期四");
-        lineDTO.setXAxisData(xAxisData);
-
-        lineDTO.setYAxisName("流量");
-        lineDTO.setYAxisNameGap(80.0);
-        lineDTO.setYAxisUnit("Mbps");
-        lineDTO.setYAxisNameLocation(AxisNameLocation.center);
-
-        LegendDTO legendDTO = new LegendDTO();
-//        lineDTO.setLegendDTO(legendDTO);
-
-        List<LineSeriesDTO> lineSeriesDTOS = new ArrayList<>();
-        LineSeriesDTO lineSeriesDTO = new LineSeriesDTO();
-        lineSeriesDTO.setName("吐出流量");
-        lineSeriesDTO.setType(ChartType.line);
-        List<Double> seriesData1 = new ArrayList<>();
-        seriesData1.add(10.0);
-        seriesData1.add(20.0);
-        seriesData1.add(30.0);
-        seriesData1.add(30.0);
-        lineSeriesDTO.setData(seriesData1);
-        lineSeriesDTOS.add(lineSeriesDTO);
-
-        LineOption lineOption = buildOption(lineDTO, legendDTO, lineSeriesDTOS);
-        String option = JSONObject.toJSONString(lineOption);
-        System.out.println(option);
+    /**
+     * 判断半径值是否为：数值|百分值|（数值或百分值的数组:容量=2）
+     *
+     * @param source
+     * @return
+     */
+    private static Boolean isRadius(String source) {
+        if ("".equals(source) || source == null) {
+            return false;
+        }
+        if (source.startsWith("[") && source.endsWith("]")) {
+            source = source.substring(source.indexOf('[') + 1, source.indexOf(']') - 1);
+        }
+        Pattern compile = Pattern.compile(RADIUS_PATTERN);
+        Matcher matcher = compile.matcher(source);
+        return matcher.matches();
 
     }
 
