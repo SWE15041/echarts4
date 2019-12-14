@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public abstract class BaseOption implements Serializable {
+public abstract class Option<T> implements Serializable {
     private Title title;
     private Tooltip tooltip;
     private Toolbox toolbox;

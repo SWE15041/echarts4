@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="statics/echarts.js"></script>
+</head>
+
+<body>
+<div id="echarts" style="width: 600px;height:400px;"></div>
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('echarts'));
+
+    // 指定图表的配置项和数据
+    /* var option = {
+         title: {
+             text: 'ECharts 入门示例',
+             subtext:'subTitle'
+         },
+         tooltip: {},
+         legend: {
+             data: [{name:"销量1",icon:"circle"},{name:"销量2",icon:"rect"}]
+             // data:["销量1","销量2"]
+         },
+         xAxis: {
+             data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+         },
+         yAxis: {},
+         series: [{
+             name: '销量1',
+             type: 'line',
+             // data:[12, 34, 56, 10, 23],
+             // data:[[12, 14], [34, 50], [56, 30], [10, 15], [23, 10]],
+             data: [5, 20, 36, 10, 10    , 20],
+             color: {
+                 type: 'linear',
+                 x: 0,
+                 y: 0,
+                 x2: 0,
+                 y2: 1,
+                 colorStops: [{
+                     offset: 0, color: 'red' // 0% 处的颜色
+                 }, {
+                     offset: 1, color: 'blue' // 100% 处的颜色
+                 }],
+                 global: false // 缺省为 false
+             }
+         },{
+             name: '销量2',
+             type: 'line',
+             // data:[12, 34, 56, 10, 23],
+             // data:[[12, 14], [34, 50], [56, 30], [10, 15], [23, 10]],
+             data: [12, 34, 56, 10, 23]
+         }
+         ]
+     };*/
+
+    var option = {
+        title: {
+            show: true,
+            text: 'ECharts 入门示例',
+            subtext: '子标题',
+            top: 0,
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                label: {
+                    show: true,
+                    formatter: '{value}'
+                }
+            },
+            formatter: function (params) {
+                if (params !== undefined && params.length > 0) {
+                    var str = params[0].name + '<br/>';
+                    $.each(params, function (index, item) {
+                        str += item.seriesName + ": " + item.value + '单位<br/>';
+                    });
+
+                    return str;
+                }
+            }
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                saveAsImage: {
+                    show: true
+                },
+                restore: {
+                    show: true
+                },
+                magicType: {
+                    show: false
+                },
+                brush: {
+                    show: false
+                }
+            }
+        },
+        dataZoom: [
+            {
+                type: 'slider',
+                startValue: '0'
+            }
+        ],
+        legend: {
+            bottom: 0,
+            left: 'center',
+            data: ['销量', '销量2']
+        },
+        xAxis: {
+            name: 'x轴(单位)',
+            type: 'category',
+            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+        },
+        yAxis: {
+            name: 'y轴(单位)'
+        },
+        series: [
+            {
+                name: '销量',
+                type: 'line',
+                symbol: 'none',
+                data: [5, 20, 36, 10, 10, 20],
+                markLine : {
+                    data : [
+                        {type : 'average', name: '平均值'}
+                    ]
+                },
+                markPoint : {
+                    data : [
+                        {type : 'min', name: '最小值'},
+                        {type : 'max', name: '最大值'}
+                    ]
+                },
+                animation: true,
+                animationEasing: 'quadraticlnOut'
+            },
+            {
+                name: '销量2',
+                type: 'line',
+                symbol: 'none',
+                data: [15, 120, 136, 110, 110, 120],
+                markLine : {
+                    data : [
+                        {type : 'average', name: '平均值'}
+                    ]
+                },
+                markPoint : {
+                    data : [
+                        {type : 'min', name: '最小值'},
+                        {type : 'max', name: '最大值'}
+                    ]
+                }
+            }
+        ]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>

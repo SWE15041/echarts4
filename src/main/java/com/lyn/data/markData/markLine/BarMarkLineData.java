@@ -1,5 +1,6 @@
 package com.lyn.data.markData.markLine;
 
+import com.lyn.constant.MarkType;
 import com.lyn.data.MarkLineData;
 import com.lyn.data.markData.BaseMarkData;
 import com.lyn.style.LineStyle;
@@ -15,7 +16,7 @@ public class BarMarkLineData extends BaseMarkData implements MarkLineData {
      * -'max' 最大值。
      * -'average' 平均值。
      */
-    private String type;
+    private MarkType type;
 
     /**
      * 在使用 type 时有效，用于指定在哪个维度上指定最大值最小值，可以是 0（xAxis, radiusAxis），1（yAxis, angleAxis），默认使用第一个数值轴所在的维度。

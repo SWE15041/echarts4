@@ -107,4 +107,15 @@ public class Title extends Basic<Title> implements Component {
      */
     private Boolean triggerEvent;
 
+    /**
+     * 距离容器的距离
+     * 可选值类型：X.xxx|数值|百分值
+     */
+    private Object x;
+
+    /**
+     * 距离容器的距离
+     * 可选值类型：Y.xxx|数值|百分值
+     */
+    private Object y;
 }

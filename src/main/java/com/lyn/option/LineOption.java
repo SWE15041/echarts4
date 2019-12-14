@@ -5,7 +5,7 @@ import com.lyn.series.LineSeries;
 import lombok.Data;
 
 @Data
-public class LineOption extends BaseOption {
+public class LineOption extends Option<LineOption> {
     private Axis xAxis;
     private Axis yAxis;
     private LineSeries[] series;

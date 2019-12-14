@@ -9,10 +9,12 @@ import com.lyn.common.*;
 import com.lyn.constant.*;
 import com.lyn.data.AxisData;
 import com.lyn.data.LegendData;
-import com.lyn.data.markData.markLine.LineMarkLineData;
-import com.lyn.data.markData.markPoint.LineMarkPointata;
 import com.lyn.data.series.LineSeriesData;
 import com.lyn.data.series.PieSeriesData;
+import com.lyn.dto.LegendDTO;
+import com.lyn.dto.LineChartDataDTO;
+import com.lyn.dto.LineSeriesDTO;
+import com.lyn.option.LineOption;
 import com.lyn.option.PieOption;
 import com.lyn.series.LineSeries;
 import com.lyn.series.MarkLine;
@@ -33,6 +35,57 @@ public class EChartsUtil {
      */
     private static final String RADIUS_PATTERN = "^(\\d+(\\.\\d+)?%?)(,(\\d+(\\.\\d+)?%?))?$";
 
+    /**
+     * 生成折线图option
+     *
+     * @param lineChartDataDTO
+     * @param legendDTO
+     * @param lineSeriesDTOList
+     * @return
+     */
+    public static LineOption buildLineOption(LineChartDataDTO lineChartDataDTO, LegendDTO legendDTO, List<LineSeriesDTO> lineSeriesDTOList) {
+        LineOption lineOption = new LineOption();
+
+        String text = lineChartDataDTO.getText();
+        String subText = lineChartDataDTO.getSubText();
+        Boolean show = lineChartDataDTO.getShow();
+        Title title = buildTitle(text, subText, show, X.center, null);
+        lineOption.setTitle(title);
+
+        String xAxisName = lineChartDataDTO.getXAxisName();
+        Double xAxisNameGap = lineChartDataDTO.getXAxisNameGap();
+        Object xAxisNameLocation = lineChartDataDTO.getXAxisNameLocation();
+        Boolean alignWithLabel = lineChartDataDTO.getXAxisAlignWithLabel();
+        List xAxisData = lineChartDataDTO.getXAxisData();
+        XAxis xAxis = buildXAxis(xAxisName, AxisType.category, xAxisData, xAxisNameGap, xAxisNameLocation, alignWithLabel);
+        lineOption.setXAxis(xAxis);
+
+        String yAxisName = lineChartDataDTO.getYAxisName();
+        Double yAxisNameGap = lineChartDataDTO.getYAxisNameGap();
+        Object yAxisNameLocation = lineChartDataDTO.getYAxisNameLocation();
+        String yAxisUnit = lineChartDataDTO.getYAxisUnit();
+        YAxis yAxis = buildYAxis(yAxisName, AxisType.value, yAxisNameGap, yAxisNameLocation, yAxisUnit);
+        lineOption.setYAxis(yAxis);
+
+        if (legendDTO != null) {
+            Legend legend = buildLegend(legendDTO);
+            lineOption.setLegend(legend);
+        }
+
+        if (lineSeriesDTOList != null && lineSeriesDTOList.size() > 0) {
+            List<LineSeries> lineSeriesList = new ArrayList<>();
+            for (LineSeriesDTO lineSeriesDTO : lineSeriesDTOList) {
+                LineSeries lineSeries = buildLineSeries(lineSeriesDTO);
+                lineSeriesList.add(lineSeries);
+            }
+            LineSeries[] lineSeries = new LineSeries[lineSeriesList.size()];
+            lineOption.setSeries(lineSeriesList.toArray(lineSeries));
+
+        }
+        return lineOption;
+
+    }
+
     public static Title buildTitle(String text, String subText, Boolean show, Object x, Object y) {
         Title title = new Title();
         title.setText(text);
@@ -43,38 +96,6 @@ public class EChartsUtil {
         return title;
     }
 
-    public static MarkLine buildBaseMarkLine() {
-        MarkLine markLine = new MarkLine();
-        LineMarkLineData lineMarkLineData = new LineMarkLineData();
-        lineMarkLineData.setName("平均值");
-        lineMarkLineData.setType(MarkType.average);
-        LineMarkLineData[] markLineData = {lineMarkLineData};
-        markLine.setData(markLineData);
-        return markLine;
-    }
-
-    public static MarkPoint buildBaseMarkPoint() {
-        MarkPoint markPoint = new MarkPoint();
-        LineMarkPointata lineMarkPointata1 = new LineMarkPointata();
-        lineMarkPointata1.setName("最大值");
-        lineMarkPointata1.setType(MarkType.max);
-        LineMarkPointata lineMarkPointata2 = new LineMarkPointata();
-        lineMarkPointata2.setName("最小值");
-        lineMarkPointata2.setType(MarkType.min);
-        LineMarkPointata[] markPointata = {lineMarkPointata1, lineMarkPointata2};
-        markPoint.setData(markPointata);
-        return markPoint;
-    }
-
-    /**
-     * @param name
-     * @param type
-     * @param data           数据项
-     * @param nameGap
-     * @param nameLocation
-     * @param alignWithLabel
-     * @return
-     */
     public static XAxis buildXAxis(String name, AxisType type, List data, Double nameGap, Object nameLocation, Boolean alignWithLabel) {
         if (data == null && data.size() <= 0) {
             return null;
@@ -159,17 +180,28 @@ public class EChartsUtil {
         return legend;
     }
 
+    public static Legend buildLegend(LegendDTO dto) {
+        LegendType type = dto.getType();
+        Object left = dto.getLeft();
+        Object top = dto.getTop();
+        Object right = dto.getRight();
+        Object bottom = dto.getBottom();
+        Orient orient = dto.getOrient();
+        List<String> data = dto.getData();
+        Legend legend = buildLegend(type, left, top, right, bottom, data, orient);
+        return legend;
+    }
+
     public static LineSeries buildLineSeries(String name, ChartType type, List<Double> data, Symbol symbol, MarkLine markLine, MarkPoint markPoint) {
         if (data == null && data.size() <= 0) {
             return null;
         }
         LineSeries lineSeries = new LineSeries();
         lineSeries.setName(name);
-        lineSeries.setType(type == null ? ChartType.line : type);
-//        lineSeries.setMarkLine(markLine == null ? new MarkLine() : markLine);
-//        lineSeries.setMarkPoint(markPoint == null ? new MarkPoint() : markPoint);
-        lineSeries.setMarkLine(markLine);
-        lineSeries.setMarkPoint(markPoint);
+        if (type == null) {
+            type = ChartType.line;
+        }
+        lineSeries.setType(type);
         List<LineSeriesData> lineSeriesDataList = new ArrayList<>();
         data.forEach(o -> lineSeriesDataList.add(new LineSeriesData(o)));
         LineSeriesData[] lineSeriesData = new LineSeriesData[lineSeriesDataList.size()];
@@ -177,6 +209,14 @@ public class EChartsUtil {
 
         return lineSeries;
     }
+    public static LineSeries buildLineSeries(LineSeriesDTO dto) {
+        String name = dto.getName();
+        List<Double> data = dto.getData();
+        ChartType type = dto.getType();
+        LineSeries lineSeries = buildLineSeries(name, type, data, null, null, null);
+        return lineSeries;
+    }
+
 
     /**
      * 生成饼图option
@@ -287,6 +327,7 @@ public class EChartsUtil {
 
         Tooltip tooltip = buildToooltip(TriggerType.item, "{a}<br/>{b}:{c}({d})", null);
         pieOption.setTooltip(tooltip);
+
 
 
         String pieOptionJson = JSONObject.toJSONString(pieOption);
