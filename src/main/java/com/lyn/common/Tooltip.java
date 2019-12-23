@@ -30,7 +30,7 @@ import lombok.Data;
 
 /**
  * 提示框配置
- * 注意：series.tooltip 仅在 tooltip.triggerType 为 'item' 时有效。
+ * 注意：series.tooltip 仅在 tooltip.trigger 为 'item' 时有效。
  */
 @Data
 public class Tooltip implements Component {
@@ -45,11 +45,11 @@ public class Tooltip implements Component {
      * 'item': 数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。
      * <p>
      * 'axis': 坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用。
-     * 在 ECharts 2.x 中只支持类目轴上使用 axis triggerType，在 ECharts 3 中支持在直角坐标系和极坐标系上的所有类型的轴。并且可以通过 axisPointer.axis 指定坐标轴。
+     * 在 ECharts 2.x 中只支持类目轴上使用 axis trigger，在 ECharts 3 中支持在直角坐标系和极坐标系上的所有类型的轴。并且可以通过 axisPointer.axis 指定坐标轴。
      * <p>
      * 'none': 什么都不触发。
      */
-    private TriggerType triggerType;
+    private TriggerType trigger;
     /**
      * 提示框触发的条件
      * [ default: 'mousemove|click' ]
@@ -106,7 +106,7 @@ public class Tooltip implements Component {
     /**
      * 提示框浮层内容格式器，支持字符串模板和回调函数两种形式。
      * 支持：1, 字符串模板
-     * 模板变量有 {a}, {b}，{c}，{d}，{e}，分别表示系列名，数据名，数据值等。 在 triggerType 为 'axis' 的时候，会有多个系列的数据，此时可以通过 {a0}, {a1}, {a2} 这种后面加索引的方式表示系列的索引。 不同图表类型下的 {a}，{b}，{c}，{d} 含义不一样。 其中变量{a}, {b}, {c}, {d}在不同图表类型下代表数据含义为：
+     * 模板变量有 {a}, {b}，{c}，{d}，{e}，分别表示系列名，数据名，数据值等。 在 trigger 为 'axis' 的时候，会有多个系列的数据，此时可以通过 {a0}, {a1}, {a2} 这种后面加索引的方式表示系列的索引。 不同图表类型下的 {a}，{b}，{c}，{d} 含义不一样。 其中变量{a}, {b}, {c}, {d}在不同图表类型下代表数据含义为：
      * <p>
      * 折线（区域）图、柱状（条形）图、K线图 : {a}（系列名称），{b}（类目值），{c}（数值）, {d}（无）
      * <p>

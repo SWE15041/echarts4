@@ -25,10 +25,10 @@ public class DrawLineTest {
         xAxisData.add("星期二");
         xAxisData.add("星期三");
         xAxisData.add("星期四");
-        XAxis xAxis = EChartsUtil.buildXAxis("x轴轴称", AxisType.category, xAxisData, 20.0, AxisNameLocation.center, true);
+        XAxis xAxis = EChartsUtil.buildXAxis("x轴轴称", AxisType.category, xAxisData, 20.0, AxisNameLocation.center, true,false);
 
         //Y轴配置
-        YAxis yAxis = EChartsUtil.buildYAxis("y轴轴称", AxisType.value, 80.0, AxisNameLocation.center, "Mbps");
+        YAxis yAxis = EChartsUtil.buildYAxis("y轴轴称", AxisType.value, 60.0, AxisNameLocation.center,null);
 
         //图例配置
         Legend legend = EChartsUtil.buildLegend(LegendType.plain, null, null, null, 0, null, null);

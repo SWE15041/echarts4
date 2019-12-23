@@ -73,9 +73,10 @@ public class EChartsUtil {
      * @param nameGap
      * @param nameLocation
      * @param alignWithLabel
+     * @param boundaryGap
      * @return
      */
-    public static XAxis buildXAxis(String name, AxisType type, List data, Double nameGap, Object nameLocation, Boolean alignWithLabel) {
+    public static XAxis buildXAxis(String name, AxisType type, List data, Double nameGap, Object nameLocation, Boolean alignWithLabel, Object boundaryGap) {
         if (data == null && data.size() <= 0) {
             return null;
         }
@@ -96,7 +97,9 @@ public class EChartsUtil {
             axisTick.setAlignWithLabel(alignWithLabel);
             xAxis.setAxisTick(axisTick);
         }
-
+        if (boundaryGap != null) {
+            xAxis.setBoundaryGap(boundaryGap);
+        }
         List<AxisData> axisDataList = new ArrayList<>();
         for (Object o : data) {
             AxisData temp = new AxisData();
@@ -123,7 +126,11 @@ public class EChartsUtil {
         }
 
         AxisLabel axisLabel = new AxisLabel();
-        axisLabel.setFormatter("{value}" + unit);
+        if (unit == null || "".equals(unit)) {
+            axisLabel.setFormatter("{value}");
+        } else {
+            axisLabel.setFormatter("{value}" + unit);
+        }
         yAxis.setAxisLabel(axisLabel);
 
         return yAxis;
@@ -259,7 +266,7 @@ public class EChartsUtil {
     public static Tooltip buildToooltip(TriggerType triggerType, String formatter, AxisPointer axisPointer) {
         Tooltip tooltip = new Tooltip();
         triggerType = triggerType == null ? TriggerType.item : triggerType;
-        tooltip.setTriggerType(triggerType);
+        tooltip.setTrigger(triggerType);
         tooltip.setFormatter(formatter);
         tooltip.setAxisPointer(axisPointer);
         return tooltip;
