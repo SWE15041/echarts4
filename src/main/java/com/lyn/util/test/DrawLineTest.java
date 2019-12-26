@@ -25,10 +25,10 @@ public class DrawLineTest {
         xAxisData.add("星期二");
         xAxisData.add("星期三");
         xAxisData.add("星期四");
-        XAxis xAxis = EChartsUtil.buildXAxis("x轴轴称", AxisType.category, xAxisData, 20.0, AxisNameLocation.center, true,false);
+        XAxis xAxis = EChartsUtil.buildXAxis("x轴轴称", AxisType.category, xAxisData, 20.0, AxisNameLocation.center, true, false);
 
         //Y轴配置
-        YAxis yAxis = EChartsUtil.buildYAxis("y轴轴称", AxisType.value, 60.0, AxisNameLocation.center,null);
+        YAxis yAxis = EChartsUtil.buildYAxis("y轴轴称", AxisType.value, 60.0, AxisNameLocation.center, null);
 
         //图例配置
         Legend legend = EChartsUtil.buildLegend(LegendType.plain, null, null, null, 0, null, null);
@@ -40,7 +40,7 @@ public class DrawLineTest {
         seriesData1.add(20.0);
         seriesData1.add(15.0);
         seriesData1.add(30.0);
-        LineSeries lineSeries1 = EChartsUtil.buildLineSeries("系列1", ChartType.line, seriesData1, null, EChartsUtil.buildBaseMarkLine(), EChartsUtil.buildBaseMarkPoint());
+        LineSeries lineSeries1 = EChartsUtil.buildLineSeries("系列1", ChartType.line, seriesData1);
 
         lineSeriesList.add(lineSeries1);
         List<Double> seriesData2 = new ArrayList<>();
@@ -48,7 +48,7 @@ public class DrawLineTest {
         seriesData2.add(25.0);
         seriesData2.add(34.0);
         seriesData2.add(17.0);
-        LineSeries lineSeries2 = EChartsUtil.buildLineSeries("系列2", ChartType.line, seriesData2, null, EChartsUtil.buildBaseMarkLine(), EChartsUtil.buildBaseMarkPoint());
+        LineSeries lineSeries2 = EChartsUtil.buildLineSeries("系列2", ChartType.line, seriesData2);
         lineSeriesList.add(lineSeries2);
         LineSeries[] series = new LineSeries[lineSeriesList.size()];
         series = lineSeriesList.toArray(series);
