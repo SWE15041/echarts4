@@ -7,7 +7,6 @@ import com.lyn.axis.XAxis;
 import com.lyn.axis.YAxis;
 import com.lyn.common.Legend;
 import com.lyn.common.Title;
-import com.lyn.common.Tooltip;
 import com.lyn.constant.*;
 import com.lyn.data.AxisData;
 import com.lyn.data.markData.markLine.LineMarkLineData;
@@ -27,7 +26,7 @@ import java.util.List;
 /**
  * 组装option
  */
-public class EChartsUtilV3 {
+public class EChartsLineUtil {
 
 
     public static Title buildTitle(String text, String subText) {
@@ -143,15 +142,14 @@ public class EChartsUtilV3 {
         return lineSeries;
     }
 
-
     /**
      * 创建折线图option
      *
-     * @param text 标题
-     * @param subText 子标题
-     * @param xAxisName x轴轴称
-     * @param xAxisData x轴数据项
-     * @param yAxisName y轴轴称
+     * @param text           标题
+     * @param subText        子标题
+     * @param xAxisName      x轴轴称
+     * @param xAxisData      x轴数据项
+     * @param yAxisName      y轴轴称
      * @param lineSeriesList 数据
      * @return
      */
@@ -208,7 +206,35 @@ public class EChartsUtilV3 {
 
         LineOption lineOption = buildLineOption(text, subText, xAxisName, xAxisData, yAxisName, lineSeriesList);
         String string = JSONObject.toJSONString(lineOption);
-        System.out.println(string);
+        String[] line = string.split("\n");
+        String[] strings = replaceFunctionQuote(line);
+        System.out.println(strings);
+    }
 
+    public static String[] replaceFunctionQuote(String[] lines) {
+        boolean function = false;
+        boolean immediately = false;
+        for (int i = 0; i < lines.length; i++) {
+            String line = lines[i].trim();
+            if (!function && line.contains("\"function")) {
+                function = true;
+                line = line.replaceAll("\"function", "function");
+            }
+            if (function && line.contains("}\"")) {
+                function = false;
+                line = line.replaceAll("\\}\"", "\\}");
+            }
+
+            if (!immediately && line.contains("\"(function")) {
+                immediately = true;
+                line = line.replaceAll("\"\\(function", "\\(function");
+            }
+            if (immediately && line.contains("})()\"")) {
+                immediately = false;
+                line = line.replaceAll("\\}\\)\\(\\)\"", "\\}\\)\\(\\)");
+            }
+            lines[i] = line;
+        }
+        return lines;
     }
 }

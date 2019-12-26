@@ -25,9 +25,9 @@
 package com.lyn.data;
 
 import com.lyn.style.TextStyle;
+import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
@@ -35,6 +35,8 @@ import java.io.Serializable;
  * 坐标轴数据
  */
 @Data
+@Builder
+//@Accessors(chain = true)
 public class AxisData implements Serializable {
 
     /**

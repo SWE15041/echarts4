@@ -5,12 +5,15 @@ import com.lyn.axis.AxisLabel;
 import com.lyn.axis.AxisTick;
 import com.lyn.axis.XAxis;
 import com.lyn.axis.YAxis;
-import com.lyn.common.*;
+import com.lyn.common.AxisPointer;
+import com.lyn.common.Legend;
+import com.lyn.common.Title;
+import com.lyn.common.Tooltip;
 import com.lyn.constant.*;
 import com.lyn.data.AxisData;
 import com.lyn.data.LegendData;
 import com.lyn.data.markData.markLine.LineMarkLineData;
-import com.lyn.data.markData.markPoint.LineMarkPointata;
+import com.lyn.data.markData.markPoint.LineMarkPointData;
 import com.lyn.data.series.LineSeriesData;
 import com.lyn.data.series.PieSeriesData;
 import com.lyn.option.PieOption;
@@ -18,7 +21,10 @@ import com.lyn.series.LineSeries;
 import com.lyn.series.MarkLine;
 import com.lyn.series.MarkPoint;
 import com.lyn.series.PieSeries;
+import com.lyn.style.LabelStyle;
 
+import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,6 +38,15 @@ public class EChartsUtil {
      * 数值格式：纯数值|含百分号的数值
      */
     private static final String RADIUS_PATTERN = "^(\\d+(\\.\\d+)?%?)(,(\\d+(\\.\\d+)?%?))?$";
+    private static final String TOOLTIP_FORMATTER = "function (params) {\n" +
+            "            if (params !== undefined && params.length > 0) {\n" +
+            "                var str = params[0].name + '<br/>';\n" +
+            "                $.each(params, function (index, item) {\n" +
+            "                    str += item.seriesName + \": \" + item.value + '<br/>';\n" +
+            "                });\n" +
+            "                return str;\n" +
+            "            }\n" +
+            "        }";
 
     public static Title buildTitle(String text, String subText, Boolean show, Object x, Object y) {
         Title title = new Title();
@@ -55,13 +70,24 @@ public class EChartsUtil {
 
     public static MarkPoint buildBaseMarkPoint() {
         MarkPoint markPoint = new MarkPoint();
-        LineMarkPointata lineMarkPointata1 = new LineMarkPointata();
-        lineMarkPointata1.setName("最大值");
-        lineMarkPointata1.setType(MarkType.max);
-        LineMarkPointata lineMarkPointata2 = new LineMarkPointata();
-        lineMarkPointata2.setName("最小值");
-        lineMarkPointata2.setType(MarkType.min);
-        LineMarkPointata[] markPointata = {lineMarkPointata1, lineMarkPointata2};
+
+        Double symbolSize = 40.0;
+        LabelStyle label = new LabelStyle();
+        label.setFontSize(12);
+
+        LineMarkPointData lineMarkPointData1 = new LineMarkPointData();
+        lineMarkPointData1.setName("最大值");
+        lineMarkPointData1.setType(MarkType.max);
+        lineMarkPointData1.setLabel(label);
+        lineMarkPointData1.setSymbolSize(symbolSize);
+
+        LineMarkPointData lineMarkPointData2 = new LineMarkPointData();
+        lineMarkPointData2.setName("最小值");
+        lineMarkPointData2.setType(MarkType.min);
+        lineMarkPointData2.setSymbolSize(symbolSize);
+        lineMarkPointData2.setLabel(label);
+
+        LineMarkPointData[] markPointata = {lineMarkPointData1, lineMarkPointData2};
         markPoint.setData(markPointata);
         return markPoint;
     }
@@ -102,7 +128,7 @@ public class EChartsUtil {
         }
         List<AxisData> axisDataList = new ArrayList<>();
         for (Object o : data) {
-            AxisData temp = new AxisData();
+            AxisData temp = AxisData.builder().build();
             temp.setValue(o);
             axisDataList.add(temp);
         }
@@ -166,22 +192,29 @@ public class EChartsUtil {
         return legend;
     }
 
-    public static LineSeries buildLineSeries(String name, ChartType type, List<Double> data, Symbol symbol, MarkLine markLine, MarkPoint markPoint) {
+    public static LineSeries buildLineSeries(String name, ChartType type, List<Double> data) {
         if (data == null && data.size() <= 0) {
             return null;
         }
         LineSeries lineSeries = new LineSeries();
         lineSeries.setName(name);
         lineSeries.setType(type == null ? ChartType.line : type);
-//        lineSeries.setMarkLine(markLine == null ? new MarkLine() : markLine);
-//        lineSeries.setMarkPoint(markPoint == null ? new MarkPoint() : markPoint);
-        lineSeries.setMarkLine(markLine);
-        lineSeries.setMarkPoint(markPoint);
+        lineSeries.setMarkLine(buildBaseMarkLine());
+        lineSeries.setMarkPoint(buildBaseMarkPoint());
+        lineSeries.setSymbol(SymbolType.none);
+
         List<LineSeriesData> lineSeriesDataList = new ArrayList<>();
-        data.forEach(o -> lineSeriesDataList.add(new LineSeriesData(o)));
+        DecimalFormat decimalFormat = new DecimalFormat("0.##");
+        data.forEach(item -> {
+            try {
+                double value = decimalFormat.parse(decimalFormat.format(item)).doubleValue();
+                lineSeriesDataList.add(new LineSeriesData(value));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        });
         LineSeriesData[] lineSeriesData = new LineSeriesData[lineSeriesDataList.size()];
         lineSeries.setData(lineSeriesDataList.toArray(lineSeriesData));
-
         return lineSeries;
     }
 
@@ -267,7 +300,7 @@ public class EChartsUtil {
         Tooltip tooltip = new Tooltip();
         triggerType = triggerType == null ? TriggerType.item : triggerType;
         tooltip.setTrigger(triggerType);
-        tooltip.setFormatter(formatter);
+        tooltip.setFormatter(formatter == null ? TOOLTIP_FORMATTER : formatter);
         tooltip.setAxisPointer(axisPointer);
         return tooltip;
     }

@@ -8,7 +8,7 @@ import com.lyn.style.ItemStyle;
 import lombok.Data;
 
 @Data
-public class LineMarkPointata extends BaseMarkData implements MarkPointData {
+public class LineMarkPointData extends BaseMarkData implements MarkPointData {
 
     /**
      * 特殊的标注类型，用于标注最大值最小值等。

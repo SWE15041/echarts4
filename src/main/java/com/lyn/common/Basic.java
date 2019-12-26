@@ -25,9 +25,11 @@
 package com.lyn.common;
 
 import com.lyn.constant.Orient;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 

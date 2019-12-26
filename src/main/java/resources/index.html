@@ -8,6 +8,22 @@
 
 <body>
 <div id="echarts" style="width: 600px;height:400px;"></div>
+<div class="container">
+    <div class="col-sm-12">
+        <div class="col-sm-12">
+            <button id="lineOption" onclick="getLineOption();"> 获取折线图</button>
+            <button id="pieOption" onclick="getPieOption();">获取饼图</button>
+        </div>
+        <div class="col-sm-6">
+            <div id="line" style="height:400px;"></div>
+        </div>
+        <div class="col-sm-6">
+            <div id="pie" style="height:400px;"></div>
+        </div>
+
+    </div>
+</div>
+
 <script>
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('echarts'));
@@ -125,15 +141,15 @@
                 type: 'line',
                 symbol: 'none',
                 data: [5, 20, 36, 10, 10, 20],
-                markLine : {
-                    data : [
-                        {type : 'average', name: '平均值'}
+                markLine: {
+                    data: [
+                        {type: 'average', name: '平均值'}
                     ]
                 },
-                markPoint : {
-                    data : [
-                        {type : 'min', name: '最小值'},
-                        {type : 'max', name: '最大值'}
+                markPoint: {
+                    data: [
+                        {type: 'min', name: '最小值'},
+                        {type: 'max', name: '最大值'}
                     ]
                 },
                 animation: true,
@@ -144,15 +160,15 @@
                 type: 'line',
                 symbol: 'none',
                 data: [15, 120, 136, 110, 110, 120],
-                markLine : {
-                    data : [
-                        {type : 'average', name: '平均值'}
+                markLine: {
+                    data: [
+                        {type: 'average', name: '平均值'}
                     ]
                 },
-                markPoint : {
-                    data : [
-                        {type : 'min', name: '最小值'},
-                        {type : 'max', name: '最大值'}
+                markPoint: {
+                    data: [
+                        {type: 'min', name: '最小值'},
+                        {type: 'max', name: '最大值'}
                     ]
                 }
             }
