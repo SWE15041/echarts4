@@ -16,6 +16,7 @@ import com.lyn.data.markData.markLine.LineMarkLineData;
 import com.lyn.data.markData.markPoint.LineMarkPointData;
 import com.lyn.data.series.LineSeriesData;
 import com.lyn.data.series.PieSeriesData;
+import com.lyn.option.LineOption;
 import com.lyn.option.PieOption;
 import com.lyn.series.LineSeries;
 import com.lyn.series.MarkLine;
@@ -305,6 +306,27 @@ public class EChartsUtil {
         return tooltip;
     }
 
+    /**
+     * 绘制无数据空图的optipn
+     *
+     * @param text      标题
+     * @param subText   子标题
+     * @param xAxisName x轴名称
+     * @param yAxisName y轴名称
+     * @return
+     */
+    public static LineOption buildEmptyLineOption(String text, String subText, String xAxisName, String yAxisName) {
+        LineOption lineOption = new LineOption();
+        Title title = buildTitle(text, subText, true, X.center, null);
+        lineOption.setTitle(title);
+        XAxis xAxis = new XAxis();
+        xAxis.setName(xAxisName);
+        lineOption.setXAxis(xAxis);
+        YAxis yAxis = new YAxis();
+        yAxis.setName(yAxisName);
+        lineOption.setYAxis(yAxis);
+        return lineOption;
+    }
 
     public static void main(String[] args) {
         List<String> legendData = new ArrayList<>();
