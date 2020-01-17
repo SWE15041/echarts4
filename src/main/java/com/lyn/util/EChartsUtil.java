@@ -5,10 +5,7 @@ import com.lyn.axis.AxisLabel;
 import com.lyn.axis.AxisTick;
 import com.lyn.axis.XAxis;
 import com.lyn.axis.YAxis;
-import com.lyn.common.AxisPointer;
-import com.lyn.common.Legend;
-import com.lyn.common.Title;
-import com.lyn.common.Tooltip;
+import com.lyn.common.*;
 import com.lyn.constant.*;
 import com.lyn.data.AxisData;
 import com.lyn.data.LegendData;
@@ -16,6 +13,8 @@ import com.lyn.data.markData.markLine.LineMarkLineData;
 import com.lyn.data.markData.markPoint.LineMarkPointData;
 import com.lyn.data.series.LineSeriesData;
 import com.lyn.data.series.PieSeriesData;
+import com.lyn.feature.Restore;
+import com.lyn.feature.SaveAsImage;
 import com.lyn.option.LineOption;
 import com.lyn.option.PieOption;
 import com.lyn.series.LineSeries;
@@ -297,13 +296,26 @@ public class EChartsUtil {
 
     }
 
-    public static Tooltip buildToooltip(TriggerType triggerType, String formatter, AxisPointer axisPointer) {
+    public static Tooltip buildTooltip(TriggerType triggerType, String formatter, AxisPointer axisPointer) {
         Tooltip tooltip = new Tooltip();
         triggerType = triggerType == null ? TriggerType.item : triggerType;
         tooltip.setTrigger(triggerType);
         tooltip.setFormatter(formatter == null ? TOOLTIP_FORMATTER : formatter);
         tooltip.setAxisPointer(axisPointer);
         return tooltip;
+    }
+
+    public static Toolbox buildToolbox() {
+        Toolbox toolbox = new Toolbox();
+        Feature feature = new Feature();
+        SaveAsImage saveAsImage = new SaveAsImage();
+        saveAsImage.setTitle("下载");
+        Restore restore = new Restore();
+        restore.setTitle("刷新");
+        feature.setSaveAsImage(saveAsImage);
+        feature.setRestore(restore);
+        toolbox.setFeature(feature);
+        return toolbox;
     }
 
     /**
@@ -347,11 +359,19 @@ public class EChartsUtil {
         pieSeriesList.add(pieSeries);
         PieOption pieOption = buildPieOption("主标题", "副标题", legend, pieSeriesList);
 
-        Tooltip tooltip = buildToooltip(TriggerType.item, "{a}<br/>{b}:{c}({d})", null);
+        Tooltip tooltip = buildTooltip(TriggerType.item, "{a}<br/>{b}:{c}({d})", null);
         pieOption.setTooltip(tooltip);
 
+        Toolbox toolbox = buildToolbox();
+        pieOption.setToolbox(toolbox);
 
         String pieOptionJson = JSONObject.toJSONString(pieOption);
         System.out.println(pieOptionJson);
+
+        DecimalFormat decimalFormat = new DecimalFormat("0.##");
+        String format = decimalFormat.format(0.005715526470953327);
+        System.out.println(format);
     }
+
+
 }

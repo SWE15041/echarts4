@@ -2,6 +2,7 @@ package com.lyn.util.test;
 
 import com.lyn.common.Legend;
 import com.lyn.common.Title;
+import com.lyn.common.Toolbox;
 import com.lyn.common.Tooltip;
 import com.lyn.constant.*;
 import com.lyn.option.PieOption;
@@ -26,7 +27,7 @@ public class DrawPieTest {
         legendData.add("b");
         legendData.add("c");
         legendData.add("d");
-        Legend legend = EChartsUtil.buildLegend(LegendType.plain, null, null, 20, null, legendData, Orient.vertical);
+        Legend legend = EChartsUtil.buildLegend(LegendType.plain, null, 30, 0, null, legendData, Orient.vertical);
 
 
         //系列
@@ -43,8 +44,10 @@ public class DrawPieTest {
         series = pieSeriesList.toArray(series);
 
         //提示框
-        Tooltip tooltip = EChartsUtil.buildToooltip(TriggerType.item, "{a}<br/>{b}:{c}({d}%)", null);
+        Tooltip tooltip = EChartsUtil.buildTooltip(TriggerType.item, "{a}<br/>{b}:{c}({d}%)", null);
 
+        //工具栏
+        Toolbox toolbox = EChartsUtil.buildToolbox();
         //其他组件等
 
         //组装
@@ -52,6 +55,7 @@ public class DrawPieTest {
         pieOption.setLegend(legend);
         pieOption.setTooltip(tooltip);
         pieOption.setSeries(series);
+        pieOption.setToolbox(toolbox);
 
         return pieOption;
     }

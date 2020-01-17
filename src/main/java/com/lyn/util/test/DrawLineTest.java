@@ -4,6 +4,7 @@ import com.lyn.axis.XAxis;
 import com.lyn.axis.YAxis;
 import com.lyn.common.Legend;
 import com.lyn.common.Title;
+import com.lyn.common.Toolbox;
 import com.lyn.constant.*;
 import com.lyn.option.LineOption;
 import com.lyn.series.LineSeries;
@@ -53,12 +54,16 @@ public class DrawLineTest {
         LineSeries[] series = new LineSeries[lineSeriesList.size()];
         series = lineSeriesList.toArray(series);
 
+        Toolbox toolbox = EChartsUtil.buildToolbox();
+
+
         //组装option
         lineOption.setTitle(title);
         lineOption.setXAxis(xAxis);
         lineOption.setYAxis(yAxis);
         lineOption.setLegend(legend);
         lineOption.setSeries(series);
+        lineOption.setToolbox(toolbox);
 
 
         return lineOption;

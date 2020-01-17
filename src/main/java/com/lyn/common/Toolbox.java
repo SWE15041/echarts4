@@ -27,14 +27,12 @@ package com.lyn.common;
 import com.lyn.constant.Orient;
 import com.lyn.style.IconStyle;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * 工具栏。内置有导出图片，数据视图，动态类型切换，数据区域缩放，重置五个工具。
  */
 @Data
-public class Toolbox  implements Component {
+public class Toolbox implements Component {
 
     /**
      * 组件 ID。默认不指定。指定则可用于在 option 或者 API 中引用组件。
@@ -43,8 +41,9 @@ public class Toolbox  implements Component {
 
     /**
      * 是否显示工具栏组件。
+     * 默认值：true
      */
-    private Boolean show = true;
+    private Boolean show;
 
     /**
      * 工具栏 icon 的布局朝向。，可选为："horizontal" | "vertical"
@@ -55,17 +54,19 @@ public class Toolbox  implements Component {
      * 工具栏 icon 的大小。
      * 默认值：15
      */
-    private Double itemSize = 15.0;
+    private Double itemSize;
 
     /**
      * 工具栏 icon 每项之间的间隔。横向布局时为水平间隔，纵向布局时为纵向间隔。
+     * 默认值：10.0
      */
-    private Double itemGap = 10.0;
+    private Double itemGap;
 
     /**
      * 是否在鼠标 hover 的时候显示每个工具 icon 的标题。
+     * 默认值：true
      */
-    private Boolean showTitle = true;
+    private Boolean showTitle;
 
 
     /**
@@ -84,26 +85,28 @@ public class Toolbox  implements Component {
 
     /**
      * 所有图形的 zlevel 值。
+     * 默认值： 0.0
      */
-    private Double zlevel = 0.0;
+    private Double zlevel;
     /**
      * 组件的所有图形的z值。控制图形的前后顺序。z值小的图形会被z值大的图形覆盖。
      * z相比zlevel优先级更低，而且不会创建新的 Canvas。
+     * 默认值：2.0
      */
-    private Double z = 2.0;
+    private Double z;
     /**
      * 工具栏组件离容器左|上|右|下侧的距离。
      * 默认值：'auto'
      */
-    private Object left = "auto";
-    private Object top = "auto";
-    private Object right = "auto";
-    private Object bottom = "auto";
+    private Object left;
+    private Object top;
+    private Object right;
+    private Object bottom;
     /**
      * 工具栏组件的 宽度|高度 。默认自适应。
      */
-    private Object width = "auto";
-    private Object height = "auto";
+    private Object width;
+    private Object height;
 
     /**
      * 工具箱的 tooltip 配置，配置项同 tooltip。
